@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>aboshi — Works</title>
+  <meta name="description" content="aboshiのポートフォリオ。便利なブラウザツールを公開しています。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <span class="nav-logo">aboshi</span>
+      <a class="nav-link" href="https://github.com/aboshiDaisuke" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-label">Portfolio</p>
+      <h1 class="hero-title">Browser<br><span class="gradient-text">Tools</span></h1>
+      <p class="hero-sub">ブラウザで動く、便利なWebツールを作っています。</p>
+      <a href="#works" class="btn-primary" id="hero-cta">作品を見る</a>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-dot"></div>
+    </div>
+  </section>
+
+  <!-- WORKS -->
+  <section id="works">
+    <div class="section-inner">
+      <p class="section-label">Works</p>
+      <h2 class="section-title">公開中のツール</h2>
+
+      <div class="cards">
+
+        <!-- Card 1: srt-to-fcpxml -->
+        <article class="card" id="card-srt">
+          <div class="card-image-wrap">
+            <img src="srt_thumb.png" alt="SRT to FCPXML Editor スクリーンショット" class="card-image" />
+            <div class="card-image-overlay"></div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="tag">Web App</span>
+              <span class="tag tag-accent">動画制作</span>
+            </div>
+            <h3 class="card-title">SRT to FCPXML Editor</h3>
+            <p class="card-desc">
+              SRT字幕ファイルをFinal Cut Pro用FCPXMLに変換するブラウザエディタ。
+              音声波形表示・動画プレビュー・タイムライン上でのIN/OUT点ドラッグ編集など、
+              本格的な字幕編集ワークフローをすべてブラウザ上で実現。
+            </p>
+            <ul class="card-features">
+              <li>🎬 動画＆SRTをドラッグ＆ドロップで同時読み込み</li>
+              <li>🔊 Web Audio APIによる音声波形表示・波形ズーム</li>
+              <li>✏️ タイムライン上でIN/OUT点を直接ドラッグ編集</li>
+              <li>⚡ 複数行字幕・文字数オーバー警告・検索＆一括置換</li>
+              <li>🛡️ IN/OUT点の逆転・重複を防ぐ自動ガード機能</li>
+            </ul>
+            <div class="card-footer">
+              <a href="https://github.com/aboshiDaisuke/srt-to-fcpxml" target="_blank" rel="noopener" class="btn-outline" id="btn-srt-github">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: media-to-mp3-merger -->
+        <article class="card" id="card-mp3">
+          <div class="card-image-wrap">
+            <img src="mp3_thumb.png" alt="Media to MP3 Merger スクリーンショット" class="card-image" />
+            <div class="card-image-overlay"></div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="tag">Web App</span>
+              <span class="tag tag-accent2">音声・動画</span>
+            </div>
+            <h3 class="card-title">Media to MP3 Merger</h3>
+            <p class="card-desc">
+              動画・音声ファイルをMP3に変換し、複数ファイルを一本に結合できるブラウザツール。
+              インストール不要でドラッグ＆ドロップするだけで使えるシンプルさが特徴。
+            </p>
+            <ul class="card-features">
+              <li>🎵 動画・音声ファイルをMP3に変換</li>
+              <li>🔗 複数ファイルを順番通りに一本に結合</li>
+              <li>🌐 インストール不要・ブラウザだけで完結</li>
+              <li>🖱️ ドラッグ＆ドロップで簡単に操作</li>
+            </ul>
+            <div class="card-footer">
+              <a href="https://github.com/aboshiDaisuke/media-to-mp3-merger" target="_blank" rel="noopener" class="btn-outline" id="btn-mp3-github">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <p>© 2026 aboshi · Built with ❤️</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
