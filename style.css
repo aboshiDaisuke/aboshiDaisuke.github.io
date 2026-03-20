@@ -177,6 +177,12 @@ body {
   box-shadow: 0 0 60px rgba(108,99,255,0.6);
 }
 
+.btn-primary.btn-sm {
+  padding: 10px 22px;
+  font-size: 0.875rem;
+  box-shadow: 0 0 24px rgba(108,99,255,0.35);
+}
+
 .hero-scroll-hint {
   position: absolute;
   bottom: 36px;
