@@ -58,6 +58,7 @@ body {
   font-size: 1.3rem;
   font-weight: 700;
   letter-spacing: 0.05em;
+  text-decoration: none;
   background: var(--grad1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
