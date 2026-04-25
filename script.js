@@ -1,24 +1,8 @@
-// Scroll reveal
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-      observer.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.15 });
+const navbar = document.getElementById("navbar");
 
-document.querySelectorAll('.card, .section-title, .section-label').forEach(el => {
-  el.classList.add('reveal');
-  observer.observe(el);
-});
+const updateNav = () => {
+  navbar.classList.toggle("is-scrolled", window.scrollY > 48);
+};
 
-// Navbar background on scroll
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 60) {
-    navbar.style.background = 'rgba(7, 9, 15, 0.92)';
-  } else {
-    navbar.style.background = 'rgba(7, 9, 15, 0.7)';
-  }
-}, { passive: true });
+updateNav();
+window.addEventListener("scroll", updateNav, { passive: true });
