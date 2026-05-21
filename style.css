@@ -8,8 +8,6 @@
 
 :root {
   --bg: #080807;
-  --surface: rgba(18, 18, 15, 0.82);
-  --surface-solid: #12120f;
   --surface-soft: rgba(255, 255, 255, 0.045);
   --line: rgba(242, 240, 232, 0.13);
   --line-strong: rgba(242, 240, 232, 0.26);
