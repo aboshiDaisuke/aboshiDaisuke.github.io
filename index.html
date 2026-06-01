@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="no-js">
 <head>
   <meta charset="UTF-8" />
+  <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ABS Mart | Browser Tools</title>
   <meta name="description" content="ABS Martのポートフォリオ。ブラウザで使える小さなWebツールを公開しています。" />
@@ -17,6 +18,9 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+
   <nav id="navbar" aria-label="Primary">
     <div class="nav-inner">
       <a href="#hero" class="nav-logo" aria-label="ABS Mart top">
@@ -31,25 +35,23 @@
 
   <main>
     <section id="hero">
-      <div class="hero-visual" aria-hidden="true">
-        <img src="srt_thumb.png" alt="" class="hero-shot hero-shot-primary" />
-        <img src="mp3_thumb.png" alt="" class="hero-shot hero-shot-secondary" />
-      </div>
+      <div class="hero-visual" aria-hidden="true"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
       <div class="hero-shade" aria-hidden="true"></div>
 
       <div class="hero-inner">
-        <p class="hero-kicker">ABS Mart / Web Tools</p>
-        <h1 class="hero-title">ABS Mart</h1>
-        <p class="hero-lead">
+        <p class="hero-kicker" data-reveal data-reveal-delay="80">ABS Mart / Web Tools</p>
+        <h1 class="hero-title" data-reveal data-reveal-delay="160">ABS Mart</h1>
+        <p class="hero-lead" data-reveal data-reveal-delay="240">
           制作や日常のちょっとした面倒を、ブラウザだけで軽く片づけるためのツール集。
         </p>
-        <div class="hero-actions">
+        <div class="hero-actions" data-reveal data-reveal-delay="320">
           <a href="#works" class="btn btn-primary" id="hero-cta">
             <span>Works</span>
             <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg>
           </a>
         </div>
-        <div class="hero-meta" aria-label="Project summary">
+        <div class="hero-meta" data-reveal data-reveal-delay="400" aria-label="Project summary">
           <span>Browser first</span>
           <span>Creator workflow</span>
           <span>Static portfolio</span>
@@ -59,7 +61,8 @@
 
     <section id="works">
       <div class="section-inner">
-        <div class="section-heading">
+        <div class="section-heading" data-reveal>
+          <p class="section-index"><span aria-hidden="true">/</span> Works</p>
           <p class="section-kicker">Selected Works</p>
           <h2 class="section-title">公開中のツール</h2>
           <p class="section-copy">
@@ -68,7 +71,7 @@
         </div>
 
         <div class="cards">
-          <article class="work-card" id="card-srt">
+          <article class="work-card" id="card-srt" data-reveal data-reveal-delay="0">
             <a href="https://abs-mart.net/srt-to-fcpxml/" target="_blank" rel="noopener noreferrer" class="card-media" aria-label="SRT to FCPXML Editorを開く">
               <img src="srt_thumb.png" alt="SRT to FCPXML Editorの画面" class="card-image" loading="lazy" />
             </a>
@@ -100,7 +103,7 @@
             </div>
           </article>
 
-          <article class="work-card" id="card-mp3">
+          <article class="work-card" id="card-mp3" data-reveal data-reveal-delay="90">
             <a href="https://abs-mart.net/media-to-mp3-merger/" target="_blank" rel="noopener noreferrer" class="card-media" aria-label="Media to MP3 Mergerを開く">
               <img src="mp3_thumb.png" alt="Media to MP3 Mergerの画面" class="card-image" loading="lazy" />
             </a>
@@ -132,7 +135,7 @@
             </div>
           </article>
 
-          <article class="work-card" id="card-amidakuji">
+          <article class="work-card" id="card-amidakuji" data-reveal data-reveal-delay="180">
             <a href="https://abs-mart.net/amidakuji/" target="_blank" rel="noopener noreferrer" class="card-media" aria-label="おみやげ配布あみだくじを開く">
               <img src="amidakuji_thumb.png" alt="おみやげ配布あみだくじの画面" class="card-image" loading="lazy" />
             </a>
@@ -163,13 +166,59 @@
               </div>
             </div>
           </article>
+
+          <article class="work-card" id="card-bbq" data-reveal data-reveal-delay="270">
+            <a href="https://abs-mart.net/BBQ/" target="_blank" rel="noopener noreferrer" class="card-media" aria-label="飲み会 予算管理を開く">
+              <img src="bbq_thumb.png" alt="飲み会 予算管理の画面" class="card-image" loading="lazy" />
+            </a>
+            <div class="card-content">
+              <div class="card-topline">
+                <span class="card-number">04</span>
+                <div class="card-tags">
+                  <span class="tag">Web App</span>
+                  <span class="tag">Budget</span>
+                </div>
+              </div>
+              <h3 class="card-title">飲み会 予算管理</h3>
+              <p class="card-desc">
+                飲み会やイベントの集金・支出をブラウザだけで管理できるツール。
+                参加者ごとの精算や前回繰越金の引き継ぎ、PDF保存まで対応します。
+              </p>
+              <ul class="feature-list">
+                <li>イベント作成と前回繰越金の管理</li>
+                <li>支出記録と集金状況の把握</li>
+                <li>参加者・メンバーの登録</li>
+                <li>PDF保存とバックアップ／復元</li>
+              </ul>
+              <div class="card-actions">
+                <a href="https://abs-mart.net/BBQ/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" id="btn-bbq-live">
+                  <span>Live</span>
+                  <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
   </main>
 
   <footer id="footer">
-    <p>ABS Mart © 2026</p>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#hero" class="nav-logo" aria-label="ABS Mart top">
+          <span>ABS</span>
+          <span>Mart</span>
+        </a>
+        <p class="footer-tagline">Browser-first web tools.</p>
+      </div>
+      <p class="footer-status"><span class="status-dot" aria-hidden="true"></span>4 tools live</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#works">Works</a>
+        <a href="https://abs-mart.net/" target="_blank" rel="noopener noreferrer">abs-mart.net</a>
+      </nav>
+      <p class="footer-copy">ABS Mart © 2026</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
