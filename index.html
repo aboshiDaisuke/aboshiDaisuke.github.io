@@ -4,20 +4,80 @@
   <meta charset="UTF-8" />
   <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ABS Mart | Browser Tools</title>
-  <meta name="description" content="ABS Martのポートフォリオ。ブラウザで使える小さなWebツールを公開しています。" />
-  <meta property="og:title" content="ABS Mart | Browser Tools" />
-  <meta property="og:description" content="ブラウザで使える小さなWebツール集。" />
+  <title>ABS Mart｜ブラウザで使える無料Webツール（字幕変換・MP3結合・あみだくじ・予算管理）</title>
+  <meta name="description" content="インストール・登録不要で使える無料のブラウザツール集。SRT字幕のFCPXML変換、音声のMP3結合、あみだくじ、飲み会の予算管理を公開しています。" />
+  <link rel="canonical" href="https://abs-mart.net/" />
+  <meta name="theme-color" content="#16b364" />
+  <meta property="og:title" content="ABS Mart｜ブラウザで使える無料Webツール" />
+  <meta property="og:description" content="字幕変換・MP3結合・あみだくじ・予算管理。インストール・登録不要で使えるブラウザツール集。" />
   <meta property="og:image" content="https://abs-mart.net/abs_mart_portfolio.png" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="ABS Mart - ブラウザで使えるWebツール集" />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://abs-mart.net/" />
+  <meta property="og:site_name" content="ABS Mart" />
+  <meta property="og:locale" content="ja_JP" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ABS Mart｜ブラウザで使える無料Webツール" />
+  <meta name="twitter:description" content="字幕変換・MP3結合・あみだくじ・予算管理。登録不要で使えるツール集。" />
   <meta name="twitter:image" content="https://abs-mart.net/abs_mart_portfolio.png" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=20260615-light" />
+  <link rel="preload" as="image" href="abs_mart_portfolio.png" fetchpriority="high" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=20260615-pro" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://abs-mart.net/#website",
+        "url": "https://abs-mart.net/",
+        "name": "ABS Mart",
+        "description": "ブラウザで使える小さなWebツールを公開するポートフォリオサイト。",
+        "inLanguage": "ja"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "SRT to FCPXML Editor",
+        "url": "https://abs-mart.net/srt-to-fcpxml/",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Web",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Media to MP3 Merger",
+        "url": "https://abs-mart.net/media-to-mp3-merger/",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Web",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "おみやげ配布あみだくじ",
+        "url": "https://abs-mart.net/amidakuji/",
+        "applicationCategory": "GameApplication",
+        "operatingSystem": "Web",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "飲み会 予算管理",
+        "url": "https://abs-mart.net/BBQ/",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">本文へスキップ</a>
   <nav id="navbar" aria-label="Primary">
     <div class="nav-inner">
       <a href="#hero" class="nav-logo" aria-label="ABS Mart top">
@@ -25,43 +85,115 @@
         <span>Mart</span>
       </a>
       <div class="nav-actions">
-        <a class="nav-link" href="#works">Works</a>
-        <a class="nav-link" href="https://abs-mart.net/" target="_blank" rel="noopener noreferrer">Site</a>
+        <a class="nav-link" href="#points">特長</a>
+        <a class="nav-link" href="#works">ツール</a>
+        <a class="nav-cta" href="https://abs-mart.net/" target="_blank" rel="noopener noreferrer">サイトを開く</a>
       </div>
     </div>
   </nav>
 
-  <main>
+  <main id="main">
     <section id="hero">
       <div class="hero-inner">
-        <p class="eyebrow" data-reveal data-reveal-delay="60">ABS Mart — Browser Tools</p>
-        <h1 class="hero-title" data-reveal data-reveal-delay="120">
-          ブラウザで完結する、<br />小さなツール集。
-        </h1>
-        <p class="hero-lead" data-reveal data-reveal-delay="200">
-          字幕編集、音声変換、抽選、予算管理。制作と日常の手間を軽くする道具を作って公開しています。
-        </p>
-        <dl class="hero-meta" data-reveal data-reveal-delay="280" aria-label="Project summary">
-          <div class="hero-stat">
-            <dt>Live tools</dt>
-            <dd>4</dd>
+        <div class="hero-copy">
+          <p class="eyebrow" data-reveal data-reveal-delay="60" lang="en"><span class="dot" aria-hidden="true"></span>ABS Mart — Browser Tools</p>
+          <h1 class="hero-title" data-reveal data-reveal-delay="120">
+            その作業、<br /><span class="hl">ブラウザだけ</span>で終わります。
+          </h1>
+          <p class="hero-lead" data-reveal data-reveal-delay="200">
+            字幕編集、音声変換、抽選、予算管理。インストール不要・登録なしで使える小さなツールを公開しています。
+          </p>
+          <div class="hero-actions" data-reveal data-reveal-delay="260">
+            <a href="#works" class="btn btn-primary btn-lg">
+              <span>今すぐ使ってみる</span>
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="https://abs-mart.net/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-lg">
+              <span>サイトを開く</span>
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </a>
           </div>
-          <div class="hero-stat">
-            <dt>Build</dt>
-            <dd>Static</dd>
-          </div>
-          <div class="hero-stat">
-            <dt>Domain</dt>
-            <dd>abs-mart.net</dd>
-          </div>
-        </dl>
+          <ul class="hero-trust" data-reveal data-reveal-delay="320">
+            <li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>登録不要</li>
+            <li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>インストール不要</li>
+            <li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>すべて無料</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" data-reveal data-reveal-delay="200">
+          <a class="hero-card" href="https://abs-mart.net/" target="_blank" rel="noopener noreferrer" aria-label="ABS Martを開く">
+            <img src="abs_mart_portfolio.png" alt="ABS Martのポートフォリオビジュアル" width="1600" height="900" fetchpriority="high" decoding="async" />
+          </a>
+          <span class="hero-badge" aria-hidden="true">
+            <span class="hero-badge-dot"></span>4 tools live
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section id="stats" aria-label="ABS Martの特徴">
+      <div class="stats-inner">
+        <div class="stat" data-reveal data-reveal-delay="0">
+          <span class="stat-num">4</span>
+          <span class="stat-label">公開中のツール</span>
+        </div>
+        <div class="stat" data-reveal data-reveal-delay="70">
+          <span class="stat-num">¥0</span>
+          <span class="stat-label">利用料金</span>
+        </div>
+        <div class="stat" data-reveal data-reveal-delay="140">
+          <span class="stat-num">0<span class="stat-unit">手順</span></span>
+          <span class="stat-label">インストール</span>
+        </div>
+        <div class="stat" data-reveal data-reveal-delay="210">
+          <span class="stat-num">100<span class="stat-unit">%</span></span>
+          <span class="stat-label">ブラウザで完結</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="points">
+      <div class="section-inner">
+        <div class="section-heading center" data-reveal>
+          <p class="eyebrow" lang="en">Point</p>
+          <h2 class="section-title">迷わず使える、3つの理由</h2>
+        </div>
+
+        <div class="points-grid">
+          <article class="point-card" data-reveal data-reveal-delay="0">
+            <span class="point-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg>
+            </span>
+            <p class="point-no">Point 01</p>
+            <h3 class="point-title">インストール不要</h3>
+            <p class="point-desc">アプリの導入なし。ブラウザを開くだけで、すぐに使いはじめられます。</p>
+          </article>
+
+          <article class="point-card" data-reveal data-reveal-delay="80">
+            <span class="point-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>
+            </span>
+            <p class="point-no">Point 02</p>
+            <h3 class="point-title">軽くて速い</h3>
+            <p class="point-desc">静的サイトで動作が軽快。読み込みを待たされず、サクサク使えます。</p>
+          </article>
+
+          <article class="point-card" data-reveal data-reveal-delay="160">
+            <span class="point-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M20 12v8H4v-8M2 7h20v5H2zM12 22V7M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+            </span>
+            <p class="point-no">Point 03</p>
+            <h3 class="point-title">すべて無料</h3>
+            <p class="point-desc">制作と日常の手間を軽くする道具を、登録なし・無料で公開しています。</p>
+          </article>
+        </div>
       </div>
     </section>
 
     <section id="works">
       <div class="section-inner">
         <div class="section-heading" data-reveal>
-          <p class="eyebrow">Selected Works</p>
+          <p class="eyebrow" lang="en">Selected Works</p>
           <h2 class="section-title">公開中のツール</h2>
         </div>
 
@@ -69,7 +201,7 @@
           <article class="work-card" data-reveal data-reveal-delay="0">
             <a class="work-card-link" href="https://abs-mart.net/srt-to-fcpxml/" target="_blank" rel="noopener noreferrer" aria-label="SRT to FCPXML Editorを開く">
               <span class="work-thumb">
-                <img src="srt_thumb.png" alt="SRT to FCPXML Editorの画面" loading="lazy" />
+                <img src="srt_thumb.png" alt="SRT to FCPXML Editorの画面" width="640" height="640" loading="lazy" decoding="async" />
               </span>
               <span class="work-cat">01 — Video</span>
               <span class="work-title">SRT to FCPXML Editor</span>
@@ -81,7 +213,7 @@
           <article class="work-card" data-reveal data-reveal-delay="70">
             <a class="work-card-link" href="https://abs-mart.net/media-to-mp3-merger/" target="_blank" rel="noopener noreferrer" aria-label="Media to MP3 Mergerを開く">
               <span class="work-thumb">
-                <img src="mp3_thumb.png" alt="Media to MP3 Mergerの画面" loading="lazy" />
+                <img src="mp3_thumb.png" alt="Media to MP3 Mergerの画面" width="640" height="640" loading="lazy" decoding="async" />
               </span>
               <span class="work-cat">02 — Audio</span>
               <span class="work-title">Media to MP3 Merger</span>
@@ -93,7 +225,7 @@
           <article class="work-card" data-reveal data-reveal-delay="140">
             <a class="work-card-link" href="https://abs-mart.net/amidakuji/" target="_blank" rel="noopener noreferrer" aria-label="おみやげ配布あみだくじを開く">
               <span class="work-thumb">
-                <img src="amidakuji_thumb.png" alt="おみやげ配布あみだくじの画面" loading="lazy" />
+                <img src="amidakuji_thumb.png" alt="おみやげ配布あみだくじの画面" width="1024" height="1024" loading="lazy" decoding="async" />
               </span>
               <span class="work-cat">03 — Lottery</span>
               <span class="work-title">おみやげ配布あみだくじ</span>
@@ -105,7 +237,7 @@
           <article class="work-card" data-reveal data-reveal-delay="210">
             <a class="work-card-link" href="https://abs-mart.net/BBQ/" target="_blank" rel="noopener noreferrer" aria-label="飲み会 予算管理を開く">
               <span class="work-thumb">
-                <img src="bbq_thumb.png" alt="飲み会 予算管理の画面" loading="lazy" />
+                <img src="bbq_thumb.png" alt="飲み会 予算管理の画面" width="1280" height="880" loading="lazy" decoding="async" />
               </span>
               <span class="work-cat">04 — Budget</span>
               <span class="work-title">飲み会 予算管理</span>
@@ -114,6 +246,17 @@
             </a>
           </article>
         </div>
+      </div>
+    </section>
+
+    <section id="cta">
+      <div class="cta-inner" data-reveal>
+        <h2 class="cta-title">ブラウザで、今すぐ試せます。</h2>
+        <p class="cta-lead">abs-mart.net で公開中のツールを、そのままお試しください。</p>
+        <a href="https://abs-mart.net/" target="_blank" rel="noopener noreferrer" class="btn btn-invert">
+          <span>サイトを開く</span>
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </a>
       </div>
     </section>
   </main>
@@ -125,16 +268,17 @@
           <span>ABS</span>
           <span>Mart</span>
         </a>
-        <p class="footer-tagline">Browser-first web tools.</p>
+        <p class="footer-tagline" lang="en">Browser-first web tools.</p>
       </div>
       <nav class="footer-nav" aria-label="Footer">
-        <a href="#works">Works</a>
+        <a href="#points">特長</a>
+        <a href="#works">ツール</a>
         <a href="https://abs-mart.net/" target="_blank" rel="noopener noreferrer">abs-mart.net</a>
       </nav>
       <p class="footer-copy">ABS Mart © 2026</p>
     </div>
   </footer>
 
-  <script src="script.js?v=20260615-light"></script>
+  <script src="script.js?v=20260615-pro"></script>
 </body>
 </html>
