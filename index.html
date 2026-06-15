@@ -14,13 +14,10 @@
   <meta name="twitter:image" content="https://abs-mart.net/abs_mart_portfolio.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=20260615-light" />
 </head>
 <body>
-  <canvas id="bg-canvas" aria-hidden="true"></canvas>
-  <div class="grain" aria-hidden="true"></div>
-
   <nav id="navbar" aria-label="Primary">
     <div class="nav-inner">
       <a href="#hero" class="nav-logo" aria-label="ABS Mart top">
@@ -29,174 +26,92 @@
       </a>
       <div class="nav-actions">
         <a class="nav-link" href="#works">Works</a>
+        <a class="nav-link" href="https://abs-mart.net/" target="_blank" rel="noopener noreferrer">Site</a>
       </div>
     </div>
   </nav>
 
   <main>
     <section id="hero">
-      <div class="hero-visual" aria-hidden="true"></div>
-      <div class="hero-glow" aria-hidden="true"></div>
-      <div class="hero-shade" aria-hidden="true"></div>
-
       <div class="hero-inner">
-        <p class="hero-kicker" data-reveal data-reveal-delay="80">ABS Mart / Web Tools</p>
-        <h1 class="hero-title" data-reveal data-reveal-delay="160">ABS Mart</h1>
-        <p class="hero-lead" data-reveal data-reveal-delay="240">
-          制作や日常のちょっとした面倒を、ブラウザだけで軽く片づけるためのツール集。
+        <p class="eyebrow" data-reveal data-reveal-delay="60">ABS Mart — Browser Tools</p>
+        <h1 class="hero-title" data-reveal data-reveal-delay="120">
+          ブラウザで完結する、<br />小さなツール集。
+        </h1>
+        <p class="hero-lead" data-reveal data-reveal-delay="200">
+          字幕編集、音声変換、抽選、予算管理。制作と日常の手間を軽くする道具を作って公開しています。
         </p>
-        <div class="hero-actions" data-reveal data-reveal-delay="320">
-          <a href="#works" class="btn btn-primary" id="hero-cta">
-            <span>Works</span>
-            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg>
-          </a>
-        </div>
-        <div class="hero-meta" data-reveal data-reveal-delay="400" aria-label="Project summary">
-          <span>Browser first</span>
-          <span>Creator workflow</span>
-          <span>Static portfolio</span>
-        </div>
+        <dl class="hero-meta" data-reveal data-reveal-delay="280" aria-label="Project summary">
+          <div class="hero-stat">
+            <dt>Live tools</dt>
+            <dd>4</dd>
+          </div>
+          <div class="hero-stat">
+            <dt>Build</dt>
+            <dd>Static</dd>
+          </div>
+          <div class="hero-stat">
+            <dt>Domain</dt>
+            <dd>abs-mart.net</dd>
+          </div>
+        </dl>
       </div>
     </section>
 
     <section id="works">
       <div class="section-inner">
         <div class="section-heading" data-reveal>
-          <p class="section-index"><span aria-hidden="true">/</span> Works</p>
-          <p class="section-kicker">Selected Works</p>
+          <p class="eyebrow">Selected Works</p>
           <h2 class="section-title">公開中のツール</h2>
-          <p class="section-copy">
-            インストールなしで使える、作業や遊びに寄り添う小さなプロダクト。
-          </p>
         </div>
 
-        <div class="cards">
-          <article class="work-card" id="card-srt" data-reveal data-reveal-delay="0">
-            <a href="https://abs-mart.net/srt-to-fcpxml/" target="_blank" rel="noopener noreferrer" class="card-media" aria-label="SRT to FCPXML Editorを開く">
-              <img src="srt_thumb.png" alt="SRT to FCPXML Editorの画面" class="card-image" loading="lazy" />
+        <div class="works-grid">
+          <article class="work-card" data-reveal data-reveal-delay="0">
+            <a class="work-card-link" href="https://abs-mart.net/srt-to-fcpxml/" target="_blank" rel="noopener noreferrer" aria-label="SRT to FCPXML Editorを開く">
+              <span class="work-thumb">
+                <img src="srt_thumb.png" alt="SRT to FCPXML Editorの画面" loading="lazy" />
+              </span>
+              <span class="work-cat">01 — Video</span>
+              <span class="work-title">SRT to FCPXML Editor</span>
+              <span class="work-desc">SRT字幕をFinal Cut Pro向けFCPXMLへ変換するブラウザエディタ。</span>
+              <span class="work-open" aria-hidden="true">Open<svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
             </a>
-            <div class="card-content">
-              <div class="card-topline">
-                <span class="card-number">01</span>
-                <div class="card-tags">
-                  <span class="tag">Web App</span>
-                  <span class="tag">Video</span>
-                </div>
-              </div>
-              <h3 class="card-title">SRT to FCPXML Editor</h3>
-              <p class="card-desc">
-                SRT字幕ファイルをFinal Cut Pro用FCPXMLへ変換するブラウザエディタ。
-                波形表示、動画プレビュー、タイムライン編集まで一画面で扱えます。
-              </p>
-              <ul class="feature-list">
-                <li>動画とSRTを同時読み込み</li>
-                <li>音声波形とズーム表示</li>
-                <li>IN/OUT点のドラッグ編集</li>
-                <li>検索、一括置換、字幕警告</li>
-              </ul>
-              <div class="card-actions">
-                <a href="https://abs-mart.net/srt-to-fcpxml/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" id="btn-srt-live">
-                  <span>Live</span>
-                  <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg>
-                </a>
-              </div>
-            </div>
           </article>
 
-          <article class="work-card" id="card-mp3" data-reveal data-reveal-delay="90">
-            <a href="https://abs-mart.net/media-to-mp3-merger/" target="_blank" rel="noopener noreferrer" class="card-media" aria-label="Media to MP3 Mergerを開く">
-              <img src="mp3_thumb.png" alt="Media to MP3 Mergerの画面" class="card-image" loading="lazy" />
+          <article class="work-card" data-reveal data-reveal-delay="70">
+            <a class="work-card-link" href="https://abs-mart.net/media-to-mp3-merger/" target="_blank" rel="noopener noreferrer" aria-label="Media to MP3 Mergerを開く">
+              <span class="work-thumb">
+                <img src="mp3_thumb.png" alt="Media to MP3 Mergerの画面" loading="lazy" />
+              </span>
+              <span class="work-cat">02 — Audio</span>
+              <span class="work-title">Media to MP3 Merger</span>
+              <span class="work-desc">動画・音声ファイルをMP3化し、複数ファイルを一本に結合。</span>
+              <span class="work-open" aria-hidden="true">Open<svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
             </a>
-            <div class="card-content">
-              <div class="card-topline">
-                <span class="card-number">02</span>
-                <div class="card-tags">
-                  <span class="tag">Web App</span>
-                  <span class="tag">Audio</span>
-                </div>
-              </div>
-              <h3 class="card-title">Media to MP3 Merger</h3>
-              <p class="card-desc">
-                動画・音声ファイルをMP3に変換し、複数ファイルを一本に結合できるブラウザツール。
-                ドラッグ＆ドロップだけで素早く処理できます。
-              </p>
-              <ul class="feature-list">
-                <li>動画・音声ファイルをMP3変換</li>
-                <li>複数ファイルの順番結合</li>
-                <li>ブラウザだけで処理完結</li>
-                <li>軽い操作感のシンプルUI</li>
-              </ul>
-              <div class="card-actions">
-                <a href="https://abs-mart.net/media-to-mp3-merger/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" id="btn-mp3-live">
-                  <span>Live</span>
-                  <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg>
-                </a>
-              </div>
-            </div>
           </article>
 
-          <article class="work-card" id="card-amidakuji" data-reveal data-reveal-delay="180">
-            <a href="https://abs-mart.net/amidakuji/" target="_blank" rel="noopener noreferrer" class="card-media" aria-label="おみやげ配布あみだくじを開く">
-              <img src="amidakuji_thumb.png" alt="おみやげ配布あみだくじの画面" class="card-image" loading="lazy" />
+          <article class="work-card" data-reveal data-reveal-delay="140">
+            <a class="work-card-link" href="https://abs-mart.net/amidakuji/" target="_blank" rel="noopener noreferrer" aria-label="おみやげ配布あみだくじを開く">
+              <span class="work-thumb">
+                <img src="amidakuji_thumb.png" alt="おみやげ配布あみだくじの画面" loading="lazy" />
+              </span>
+              <span class="work-cat">03 — Lottery</span>
+              <span class="work-title">おみやげ配布あみだくじ</span>
+              <span class="work-desc">おみやげや景品を楽しく分けられる、ブラウザ上のあみだくじ。</span>
+              <span class="work-open" aria-hidden="true">Open<svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
             </a>
-            <div class="card-content">
-              <div class="card-topline">
-                <span class="card-number">03</span>
-                <div class="card-tags">
-                  <span class="tag">Web App</span>
-                  <span class="tag">Lottery</span>
-                </div>
-              </div>
-              <h3 class="card-title">おみやげ配布あみだくじ</h3>
-              <p class="card-desc">
-                おみやげや景品をみんなで楽しく分けられる、ブラウザ上のあみだくじツール。
-                参加人数と商品を入力して、ひとりずつ結果を確認できます。
-              </p>
-              <ul class="feature-list">
-                <li>参加人数をかんたん調整</li>
-                <li>商品名と数量をリスト登録</li>
-                <li>抽選スピードを切り替え</li>
-                <li>結果をひとりずつ表示</li>
-              </ul>
-              <div class="card-actions">
-                <a href="https://abs-mart.net/amidakuji/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" id="btn-amidakuji-live">
-                  <span>Live</span>
-                  <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg>
-                </a>
-              </div>
-            </div>
           </article>
 
-          <article class="work-card" id="card-bbq" data-reveal data-reveal-delay="270">
-            <a href="https://abs-mart.net/BBQ/" target="_blank" rel="noopener noreferrer" class="card-media" aria-label="飲み会 予算管理を開く">
-              <img src="bbq_thumb.png" alt="飲み会 予算管理の画面" class="card-image" loading="lazy" />
+          <article class="work-card" data-reveal data-reveal-delay="210">
+            <a class="work-card-link" href="https://abs-mart.net/BBQ/" target="_blank" rel="noopener noreferrer" aria-label="飲み会 予算管理を開く">
+              <span class="work-thumb">
+                <img src="bbq_thumb.png" alt="飲み会 予算管理の画面" loading="lazy" />
+              </span>
+              <span class="work-cat">04 — Budget</span>
+              <span class="work-title">飲み会 予算管理</span>
+              <span class="work-desc">イベントの集金・支出・繰越をブラウザだけで管理。</span>
+              <span class="work-open" aria-hidden="true">Open<svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
             </a>
-            <div class="card-content">
-              <div class="card-topline">
-                <span class="card-number">04</span>
-                <div class="card-tags">
-                  <span class="tag">Web App</span>
-                  <span class="tag">Budget</span>
-                </div>
-              </div>
-              <h3 class="card-title">飲み会 予算管理</h3>
-              <p class="card-desc">
-                飲み会やイベントの集金・支出をブラウザだけで管理できるツール。
-                参加者ごとの精算や前回繰越金の引き継ぎ、PDF保存まで対応します。
-              </p>
-              <ul class="feature-list">
-                <li>イベント作成と前回繰越金の管理</li>
-                <li>支出記録と集金状況の把握</li>
-                <li>参加者・メンバーの登録</li>
-                <li>PDF保存とバックアップ／復元</li>
-              </ul>
-              <div class="card-actions">
-                <a href="https://abs-mart.net/BBQ/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" id="btn-bbq-live">
-                  <span>Live</span>
-                  <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg>
-                </a>
-              </div>
-            </div>
           </article>
         </div>
       </div>
@@ -212,7 +127,6 @@
         </a>
         <p class="footer-tagline">Browser-first web tools.</p>
       </div>
-      <p class="footer-status"><span class="status-dot" aria-hidden="true"></span>4 tools live</p>
       <nav class="footer-nav" aria-label="Footer">
         <a href="#works">Works</a>
         <a href="https://abs-mart.net/" target="_blank" rel="noopener noreferrer">abs-mart.net</a>
@@ -221,6 +135,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=20260615-light"></script>
 </body>
 </html>
