@@ -1,0 +1,5 @@
+# OS / editor cruft
+.DS_Store
+
+# 画像の原本（AI生成ソース）。配信用JPEGはルートにコミット済み。
+_src/
