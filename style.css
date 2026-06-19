@@ -1218,7 +1218,103 @@ dd {
   transform: none;
 }
 
+/* ---------- Animated gal background ---------- */
+.bg-aura {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bg-aura span {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(46px);
+  opacity: 0.55;
+  mix-blend-mode: multiply;
+  will-change: transform;
+  animation: aura-drift 22s ease-in-out infinite;
+}
+
+.bg-aura span:nth-child(1) {
+  width: 460px;
+  height: 460px;
+  left: -90px;
+  top: 6%;
+  background: radial-gradient(circle, rgba(255, 90, 164, 0.55), transparent 70%);
+  animation-duration: 24s;
+}
+
+.bg-aura span:nth-child(2) {
+  width: 380px;
+  height: 380px;
+  right: -70px;
+  top: 2%;
+  background: radial-gradient(circle, rgba(155, 108, 255, 0.5), transparent 70%);
+  animation-duration: 28s;
+  animation-delay: -6s;
+}
+
+.bg-aura span:nth-child(3) {
+  width: 360px;
+  height: 360px;
+  left: 14%;
+  bottom: 6%;
+  background: radial-gradient(circle, rgba(91, 131, 255, 0.42), transparent 70%);
+  animation-duration: 30s;
+  animation-delay: -12s;
+}
+
+.bg-aura span:nth-child(4) {
+  width: 300px;
+  height: 300px;
+  right: 18%;
+  bottom: 10%;
+  background: radial-gradient(circle, rgba(255, 122, 184, 0.45), transparent 70%);
+  animation-duration: 26s;
+  animation-delay: -3s;
+}
+
+@keyframes aura-drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(40px, -34px) scale(1.12); }
+  66% { transform: translate(-30px, 26px) scale(0.94); }
+}
+
+.bg-aura .sparkle {
+  position: absolute;
+  bottom: -8%;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 1;
+  opacity: 0;
+  background: var(--grad-gal);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  will-change: transform, opacity;
+  animation: sparkle-rise 14s linear infinite;
+}
+
+.bg-aura .s1 { left: 10%; animation-duration: 15s; animation-delay: 0s; font-size: 1.2rem; }
+.bg-aura .s2 { left: 28%; animation-duration: 19s; animation-delay: -4s; font-size: 1.6rem; }
+.bg-aura .s3 { left: 46%; animation-duration: 13s; animation-delay: -8s; font-size: 1rem; }
+.bg-aura .s4 { left: 64%; animation-duration: 18s; animation-delay: -2s; font-size: 1.5rem; }
+.bg-aura .s5 { left: 80%; animation-duration: 16s; animation-delay: -10s; font-size: 1.3rem; }
+.bg-aura .s6 { left: 92%; animation-duration: 21s; animation-delay: -6s; font-size: 1.1rem; }
+
+@keyframes sparkle-rise {
+  0% { transform: translateY(0) rotate(0deg) scale(0.7); opacity: 0; }
+  10% { opacity: 0.9; }
+  50% { transform: translateY(-52vh) rotate(120deg) scale(1); }
+  90% { opacity: 0.85; }
+  100% { transform: translateY(-104vh) rotate(240deg) scale(0.8); opacity: 0; }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .bg-aura .sparkle { display: none; }
+
   html {
     scroll-behavior: auto;
   }
