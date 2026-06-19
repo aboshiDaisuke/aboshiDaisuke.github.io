@@ -558,11 +558,11 @@ dd {
   position: relative;
   padding: 42px 0 46px;
   background:
-    linear-gradient(90deg, rgba(255, 90, 164, 0.05) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(91, 131, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(91, 131, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255, 90, 164, 0.05) 1px, transparent 1px),
     #fff0f8;
-  background-size: 56px 56px, 56px 56px, auto;
-  border-top: 1px solid rgba(255, 90, 164, 0.12);
+  background-size: 72px 72px, 72px 72px, auto;
+  background-position: 0 0, 0 -1px, 0 0;
   border-bottom: 1px solid rgba(255, 90, 164, 0.12);
 }
 
