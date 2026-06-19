@@ -28,9 +28,11 @@
   --shadow-sm: 0 4px 12px rgba(28, 28, 68, 0.07);
   --shadow-md: 0 12px 28px rgba(28, 28, 68, 0.1);
   --shadow-pop: 0 12px 24px rgba(255, 90, 164, 0.24);
+  --grad-gal: linear-gradient(120deg, #ff5aa4 0%, #ff6fb5 35%, #9b6cff 100%);
+  --grad-gal-soft: linear-gradient(120deg, #ffd9ec 0%, #f0e2ff 100%);
   --font-body: "Inter", "Noto Sans JP", sans-serif;
   --nav-h: 74px;
-  --radius: 8px;
+  --radius: 16px;
   --pill: 999px;
   --shell: 1360px;
   --content: 1120px;
@@ -46,7 +48,11 @@ html {
 
 body {
   min-height: 100vh;
-  background: var(--bg);
+  background:
+    radial-gradient(1100px 520px at 92% -8%, rgba(155, 108, 255, 0.12), transparent 60%),
+    radial-gradient(900px 480px at 0% 4%, rgba(255, 90, 164, 0.12), transparent 58%),
+    var(--bg);
+  background-attachment: fixed;
   color: var(--text);
   font-family: var(--font-body);
   font-size: 16px;
@@ -149,16 +155,18 @@ dd {
 }
 
 .btn-primary {
-  background: var(--pink);
+  background: var(--grad-gal);
+  background-size: 160% 160%;
   color: #ffffff;
-  box-shadow: var(--shadow-pop);
+  box-shadow: 0 14px 28px rgba(255, 90, 164, 0.32), 0 0 0 3px rgba(255, 255, 255, 0.55) inset;
+  transition: var(--transition), background-position 400ms var(--ease-out);
 }
 
 .btn-primary:hover,
 .btn-primary:focus-visible {
-  background: var(--pink-strong);
-  transform: translateY(-2px);
-  box-shadow: 0 16px 30px rgba(255, 90, 164, 0.3);
+  background-position: 100% 50%;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 20px 38px rgba(155, 108, 255, 0.36), 0 0 0 3px rgba(255, 255, 255, 0.6) inset;
 }
 
 .btn-primary:hover svg {
@@ -456,11 +464,17 @@ dd {
 }
 
 .hl-pink {
-  color: var(--pink-strong);
+  background: linear-gradient(120deg, var(--pink-strong), var(--violet));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .hl-blue {
-  color: var(--blue-strong);
+  background: linear-gradient(120deg, var(--blue-strong), var(--violet));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .hero-lead {
@@ -591,6 +605,17 @@ dd {
   font-weight: 800;
   letter-spacing: 0;
   line-height: 1.2;
+}
+
+.section-heading.center .section-title::after {
+  content: "✦";
+  display: inline-block;
+  margin-left: 0.3em;
+  font-size: 0.7em;
+  background: var(--grad-gal);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 /* ---------- Points ---------- */
