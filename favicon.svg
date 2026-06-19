@@ -1,5 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="ABS Mart">
-  <rect width="64" height="64" rx="15" fill="#16b364"/>
-  <path d="M20 45 L29.5 19 h5 L44 45 h-6.4 l-1.9-5.6 h-7.4 L26.4 45 Z M31.3 27.2 l-2.4 7.1 h4.9 Z"
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff5aa4"/>
+      <stop offset="0.55" stop-color="#ff6fb5"/>
+      <stop offset="1" stop-color="#9b6cff"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="18" fill="url(#g)"/>
+  <path d="M19 46 L29 18 h6 L45 46 h-7 l-1.8-5.6 h-7.4 L29.8 46 Z M30.6 27.6 l-2.3 7 h4.7 Z"
         fill="#ffffff"/>
+  <path d="M44 16.5c1.5-2.6 5.4-1.8 5.4 1.2 0 2.2-2.7 3.9-5.4 5.8-2.7-1.9-5.4-3.6-5.4-5.8 0-3 3.9-3.8 5.4-1.2Z"
+        fill="#fff" opacity="0.95"/>
+  <circle cx="16" cy="44" r="2.3" fill="#fff" opacity="0.8"/>
 </svg>
