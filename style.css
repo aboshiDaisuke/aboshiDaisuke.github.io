@@ -861,6 +861,11 @@ dd {
   background: #f0fffd;
 }
 
+.work-icon-pdf {
+  color: #d71920;
+  background: #fff5f5;
+}
+
 .work-cat {
   display: block;
   margin-top: 14px;
@@ -915,6 +920,10 @@ dd {
 
 .work-card:nth-child(4) .work-open {
   color: #188f88;
+}
+
+.work-card:nth-child(5) .work-open {
+  color: #d71920;
 }
 
 .work-open svg {
