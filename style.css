@@ -505,76 +505,6 @@ dd {
   margin-top: 30px;
 }
 
-.hero-kpis {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: 32px;
-}
-
-.kpi-card {
-  min-height: 112px;
-  padding: 17px 12px 14px;
-  border: 1px solid rgba(28, 28, 68, 0.09);
-  border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.88);
-  box-shadow: var(--shadow-sm);
-  text-align: center;
-}
-
-.kpi-card:nth-child(2) .kpi-icon,
-.kpi-card:nth-child(2) strong {
-  color: var(--pink);
-}
-
-.kpi-card:nth-child(3) .kpi-icon,
-.kpi-card:nth-child(3) strong {
-  color: var(--blue);
-}
-
-.kpi-card:nth-child(4) .kpi-icon,
-.kpi-card:nth-child(4) strong {
-  color: var(--violet);
-}
-
-.kpi-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  margin-bottom: 6px;
-  color: var(--pink);
-}
-
-.kpi-icon svg {
-  width: 100%;
-  height: 100%;
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 2;
-}
-
-.kpi-card strong {
-  display: block;
-  color: var(--pink);
-  font-size: 2.25rem;
-  font-weight: 800;
-  line-height: 1;
-  letter-spacing: 0;
-}
-
-.kpi-card span:last-child {
-  display: block;
-  margin-top: 8px;
-  color: var(--ink);
-  font-size: 0.86rem;
-  font-weight: 800;
-  line-height: 1.35;
-}
-
 /* ---------- Section shell ---------- */
 .section-inner {
   width: min(var(--content), calc(100% - (var(--gutter) * 2)));
@@ -1113,10 +1043,6 @@ dd {
     line-height: 1.85;
   }
 
-  .hero-kpis {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   #works .section-heading {
     grid-template-columns: 1fr;
     gap: 8px;
@@ -1189,25 +1115,6 @@ dd {
   .hero-actions .btn svg {
     width: 15px;
     height: 15px;
-  }
-
-  .hero-kpis {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
-    margin-top: 24px;
-  }
-
-  .kpi-card {
-    min-height: 88px;
-    padding: 13px 8px 11px;
-  }
-
-  .kpi-card strong {
-    font-size: 1.85rem;
-  }
-
-  .kpi-card span:last-child {
-    font-size: 0.78rem;
   }
 
   .points-grid,
