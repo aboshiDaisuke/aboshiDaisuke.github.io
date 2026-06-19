@@ -26,7 +26,8 @@ index.html                     ページ本体
 style.css                      スタイル
 script.js                      ナビ追従・出現アニメ（IntersectionObserver）
 favicon.svg                    ファビコン
-abs_mart_og_generated.jpg      ヒーロー画像
+abs_mart_hero.mp4              ヒーロー動画（自動再生・ループ）
+abs_mart_hero_poster.jpg       ヒーロー動画のポスター/フォールバック画像
 abs_mart_share.jpg             OG/Twitter共有画像
 work_*_generated.jpg           各ツールのビジュアル
 CNAME                          カスタムドメイン（abs-mart.net）
