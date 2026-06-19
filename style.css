@@ -321,9 +321,8 @@ dd {
   padding: calc(var(--nav-h) + 22px) var(--gutter) 28px;
   background:
     linear-gradient(90deg, rgba(91, 131, 255, 0.055) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(255, 90, 164, 0.05) 1px, transparent 1px),
     linear-gradient(180deg, #ffffff 0%, #fffafd 72%, #fff0f8 100%);
-  background-size: 72px 72px, 72px 72px, auto;
+  background-size: 72px 72px, auto;
   overflow: hidden;
 }
 
