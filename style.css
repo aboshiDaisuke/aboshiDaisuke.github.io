@@ -394,12 +394,17 @@ dd {
   pointer-events: none;
 }
 
-.hero-visual img {
+.hero-visual img,
+.hero-visual video {
   display: block;
   width: 100%;
   height: auto;
   min-height: clamp(430px, 50vw, 650px);
   object-fit: cover;
+}
+
+.hero-visual video {
+  max-height: clamp(430px, 56vw, 720px);
 }
 
 .hero-copy {
@@ -1002,7 +1007,8 @@ dd {
   }
 
   /* スマホでもコピー枠は画像の上にオーバーレイ固定（画像中央に重ねる） */
-  .hero-visual img {
+  .hero-visual img,
+  .hero-visual video {
     min-height: clamp(540px, 96vw, 760px);
   }
 
@@ -1139,7 +1145,8 @@ dd {
     display: none;
   }
 
-  .hero-visual img {
+  .hero-visual img,
+  .hero-visual video {
     border-radius: 7px;
   }
 
