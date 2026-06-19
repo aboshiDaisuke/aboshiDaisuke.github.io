@@ -30,7 +30,6 @@ abs_mart_hero.mp4              ヒーロー動画（自動再生・ループ）
 abs_mart_hero_poster.jpg       ヒーロー動画のポスター/フォールバック画像
 abs_mart_share.jpg             OG/Twitter共有画像
 work_*_generated.jpg           各ツールのビジュアル
-CNAME                          カスタムドメイン（abs-mart.net）
 DOMAIN_MANAGEMENT.md           ドメイン管理メモ
 _src/                          画像の原本（AI生成ソース・gitignore）
 ```
@@ -46,5 +45,10 @@ python3 -m http.server 8000
 
 ## デプロイ
 
-`main` ブランチへ push すると GitHub Pages が自動公開します。
-ドメイン・DNS の設定は [DOMAIN_MANAGEMENT.md](DOMAIN_MANAGEMENT.md) を参照。
+**Cloudflare Pages** でホスティング（プロジェクト: `aboshidaisuke-github-io`）。
+`main` ブランチへ push すると Cloudflare Pages が自動でビルド・公開します（ビルド工程なし／出力ディレクトリはルート）。
+
+- 公開URL: https://abs-mart.net/ （カスタムドメイン）
+- プレビューURL: https://aboshidaisuke-github-io.pages.dev/
+- カスタムドメインは Cloudflare Pages 側で設定（リポジトリに `CNAME` ファイルは不要）
+- ドメイン・DNS の詳細は [DOMAIN_MANAGEMENT.md](DOMAIN_MANAGEMENT.md) を参照
