@@ -27,20 +27,18 @@
 
 ---
 
-### 🔧 DNS設定（Cloudflare Pages用）
+### 🔧 DNS設定（GitHub Pages用）
 
-2026-06-19 に **GitHub Pages → Cloudflare Pages** へ移行。
-カスタムドメイン追加時に Cloudflare が自動でレコードを切り替え済み：
+CloudflareのDNS管理画面で以下を設定済み：
 
 | Type | Name | Content | Proxy |
 |---|---|---|---|
-| CNAME | abs-mart.net (@) | aboshidaisuke-github-io.pages.dev | Proxied（オレンジ雲）🟠 |
+| A | abs-mart.net | 185.199.108.153 | DNS only（灰色雲） |
+| A | abs-mart.net | 185.199.109.153 | DNS only |
+| A | abs-mart.net | 185.199.110.153 | DNS only |
+| A | abs-mart.net | 185.199.111.153 | DNS only |
 
-- 旧 GitHub Pages 用の A レコード4本（185.199.108〜111.153）は移行時に自動削除済み
-- Cloudflare Pages なので **プロキシON（オレンジ雲）でOK**（旧GitHub Pages時の「プロキシOFF必須」制約は解消）
-- SSL証明書は Cloudflare が自動発行・更新
-
-> 補足: 公開は Cloudflare Pages プロジェクト `aboshidaisuke-github-io`（GitHubリポジトリ `aboshiDaisuke/aboshiDaisuke.github.io` の `main` ブランチ連携）。
+⚠️ **プロキシは絶対にONにしない**（GitHub PagesのSSL証明書が壊れる）
 
 ---
 
