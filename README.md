@@ -1,16 +1,16 @@
 # ABS Mart — ランディングページ
 
-ブラウザだけで使える無料Webツール集 **[ABS Mart](https://abs-mart.net/)** の紹介用ランディングページです。
+ブラウザだけで使える無料Webツール＆ゲーム集 **[ABS Mart](https://abs-mart.net/)** の紹介用ランディングページです。
 GitHub Pages でホスティングしています。
 
 🔗 公開URL: **https://abs-mart.net/**
 
 ## 概要
 
-インストール・登録不要で使えるブラウザツールを紹介する、静的な1ページサイトです。
+インストール・登録不要で使えるブラウザツールとゲームを紹介する、静的な1ページサイトです。
 HTML / CSS / 最小限の JavaScript のみで構成し、フレームワーク・ビルド工程はありません。
 
-## 紹介しているツール
+## 紹介しているツール＆ゲーム
 
 | # | ツール | リンク |
 |---|---|---|
@@ -18,6 +18,8 @@ HTML / CSS / 最小限の JavaScript のみで構成し、フレームワーク�
 | 02 | Media to MP3 Merger（音声結合） | https://abs-mart.net/media-to-mp3-merger/ |
 | 03 | おみやげ配布あみだくじ（抽選） | https://abs-mart.net/amidakuji/ |
 | 04 | 飲み会 予算管理 | https://abs-mart.net/BBQ/ |
+| 05 | PDF Editor | https://abs-mart.net/pdf-editor/ |
+| 06 | SUNSET DRIVE（3Dカートレーシング） | https://sunset-drive.pages.dev/ |
 
 ## ファイル構成
 

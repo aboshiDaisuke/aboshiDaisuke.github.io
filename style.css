@@ -795,6 +795,11 @@ dd {
   background: #fff5f5;
 }
 
+.work-icon-racing {
+  color: #e2453a;
+  background: #fff5ef;
+}
+
 .work-cat {
   display: block;
   margin-top: 14px;
@@ -853,6 +858,10 @@ dd {
 
 .work-card:nth-child(5) .work-open {
   color: #d71920;
+}
+
+.work-card:nth-child(6) .work-open {
+  color: #d54a33;
 }
 
 .work-open svg {
