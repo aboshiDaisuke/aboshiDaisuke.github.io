@@ -20,6 +20,7 @@ HTML / CSS / 最小限の JavaScript のみで構成し、フレームワーク�
 | 04 | 飲み会 予算管理 | https://abs-mart.net/BBQ/ |
 | 05 | PDF Editor | https://abs-mart.net/pdf-editor/ |
 | 06 | SUNSET DRIVE（3Dカートレーシング） | https://sunset-drive.pages.dev/ |
+| 07 | 夜桜詣（3D散策ゲーム） | https://yozakura.pages.dev/ |
 
 ## ファイル構成
 

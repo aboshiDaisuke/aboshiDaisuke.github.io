@@ -840,6 +840,13 @@ dd {
   background: #fff5ef;
 }
 
+.work-icon-yozakura {
+  color: #b943c7;
+  background: #fff3ff;
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
 .work-cat {
   display: block;
   margin-top: 14px;
@@ -902,6 +909,10 @@ dd {
 
 .works-grid-games .work-open {
   color: #d54a33;
+}
+
+.works-grid-games .work-card:nth-child(2) .work-open {
+  color: #a13bb5;
 }
 
 .work-open svg {
