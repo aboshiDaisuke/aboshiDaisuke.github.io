@@ -204,20 +204,6 @@ body {
   box-shadow: 8px 8px 0 var(--pink), 0 22px 60px rgba(0, 0, 0, 0.5);
 }
 
-/* Cobweb in the top-left corner of the hero frame */
-.hero-visual::before {
-  content: "";
-  position: absolute;
-  top: -4px;
-  left: -4px;
-  z-index: 5;
-  width: clamp(100px, 12vw, 160px);
-  aspect-ratio: 1;
-  pointer-events: none;
-  background: url("cobweb.svg?v=2") no-repeat top left / contain;
-  filter: drop-shadow(0 0 1px rgba(20, 10, 18, 0.85));
-}
-
 /* Spider dangling from the top edge of the hero frame */
 .hw-spider {
   position: absolute;
