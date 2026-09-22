@@ -612,7 +612,6 @@ body {
 }
 
 .hero-visual .hero-image {
-  max-height: clamp(430px, 56vw, 760px);
   object-position: 30% 40%;
 }
 
@@ -646,10 +645,6 @@ body {
 
 /* ---------- Responsive tweaks ---------- */
 @media (max-width: 1080px) {
-  .hero-visual .hero-image {
-    max-height: none;
-  }
-
   .hw-spider {
     left: auto;
     right: 18%;
