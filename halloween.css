@@ -645,6 +645,12 @@ body {
 
 /* ---------- Responsive tweaks ---------- */
 @media (max-width: 1080px) {
+  /* Once the copy moves below, the frame gets narrow; crop from the left
+     edge so the girl (left third of the art) lands in the middle */
+  .hero-visual .hero-image {
+    object-position: 0% 40%;
+  }
+
   .hw-spider {
     left: auto;
     right: 18%;

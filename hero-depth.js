@@ -225,8 +225,13 @@ async function init() {
     const sx = cover.sx / zoom;
     const sy = cover.sy / zoom;
     photoMat.uniforms.uScale.value.set(sx, sy);
-    // Texture v runs bottom-up, object-position y runs top-down.
-    photoMat.uniforms.uOffset.value.set((1 - sx) * cover.px, (1 - sy) * (1 - cover.py));
+    // Crop like the <img> (texture v runs bottom-up, object-position y runs
+    // top-down), then zoom about the crop's center so every side keeps a
+    // margin for the parallax, even when the crop sits on the image edge.
+    photoMat.uniforms.uOffset.value.set(
+      (1 - cover.sx) * cover.px + (cover.sx - sx) / 2,
+      (1 - cover.sy) * (1 - cover.py) + (cover.sy - sy) / 2
+    );
   };
 
   layout();
