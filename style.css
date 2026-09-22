@@ -358,7 +358,10 @@ dd {
   padding: calc(var(--nav-h) + 22px) var(--gutter) 34px;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 243, 249, 0.2) 100%);
+  /* clip, not hidden: hidden turns the hero into its own scroll box, which
+     shows a second scrollbar once the pumpkin ghost pokes out below */
   overflow-x: hidden;
+  overflow-x: clip;
 }
 
 #hero::before,
