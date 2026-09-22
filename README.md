@@ -31,6 +31,7 @@ HTML / CSS / 最小限の JavaScript のみで構成し、フレームワーク�
 - タイトルロゴ：`abs_mart_logo_halloween.webp`
 - トップ画像：`hero_halloween_*.webp` / `hero_halloween_1280.jpg`（動画の代わり）
 - 3Dおばけ：`models/halloween/*.glb`（[model-viewer](https://modelviewer.dev/) で表示）
+- トップ画像の立体視差：`hero-depth.js` + 奥行きマップ `hero_halloween_depth.webp`（three.js を読み込み後に遅延ロード。視差を減らす設定・データセーバー・WebGL非対応時は静止画のまま）
 - ヒョウ柄タイル：`leopard.svg`
 - 上に戻るボタン：`style.css` / `script.js` に追加（通常版でもそのまま使えます）
 
@@ -56,6 +57,7 @@ git push origin main
 index.html                     ページ本体
 style.css                      スタイル
 script.js                      ナビ追従・出現アニメ（IntersectionObserver）
+hero-depth.js                  ハロウィン版トップ画像の立体視差・霧・火の粉（three.js）
 favicon.svg                    ファビコン
 abs_mart_hero.mp4              ヒーロー動画（自動再生・ループ）
 abs_mart_hero_poster.jpg       ヒーロー動画のポスター/フォールバック画像
