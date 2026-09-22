@@ -1179,6 +1179,60 @@ dd {
   text-align: center;
 }
 
+/* ---------- Back to top ---------- */
+.to-top {
+  position: fixed;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: max(16px, env(safe-area-inset-bottom));
+  z-index: 55;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  width: 58px;
+  height: 58px;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  background: var(--grad-gal);
+  color: #ffffff;
+  font-family: var(--font-sticker);
+  font-size: 0.72rem;
+  line-height: 1;
+  text-decoration: none;
+  box-shadow: 4px 4px 0 var(--cobalt);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition:
+    opacity var(--transition),
+    visibility var(--transition),
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.to-top svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.6;
+}
+
+.to-top:hover,
+.to-top:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 6px 6px 0 var(--gold);
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 1180px) {
   .hero-title {

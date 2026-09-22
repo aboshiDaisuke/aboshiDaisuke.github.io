@@ -1,15 +1,19 @@
 const navbar = document.getElementById("navbar");
 const hero = document.getElementById("hero");
+const toTop = document.querySelector(".to-top");
 
 if (navbar && hero && "IntersectionObserver" in window) {
   const navObserver = new IntersectionObserver(([entry]) => {
     navbar.classList.toggle("is-scrolled", !entry.isIntersecting);
+    toTop?.classList.toggle("is-visible", !entry.isIntersecting);
   }, {
     rootMargin: "-48px 0px 0px 0px",
     threshold: 0
   });
 
   navObserver.observe(hero);
+} else {
+  toTop?.classList.add("is-visible");
 }
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
