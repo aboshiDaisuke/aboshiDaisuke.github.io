@@ -115,6 +115,34 @@ body {
   display: none;
 }
 
+/* In the navbar the logo is small and its black "S" melts into the dark bar,
+   so it sits on a white sticker plate like the section titles */
+#navbar .nav-logo {
+  padding: 2px 10px;
+  border: 3px solid var(--hw-black);
+  border-radius: 16px;
+  background: var(--hw-white);
+  box-shadow: 3px 3px 0 var(--pink);
+  transform: rotate(-1.5deg);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+#navbar .nav-logo:hover,
+#navbar .nav-logo:focus-visible {
+  transform: rotate(0deg) translateY(-1px);
+  box-shadow: 4px 4px 0 var(--gold);
+}
+
+#navbar .logo-img {
+  height: 52px;
+  filter: none;
+}
+
+#navbar .nav-logo:hover .logo-img,
+#navbar .nav-logo:focus-visible .logo-img {
+  transform: none;
+}
+
 #footer .logo-img {
   height: 84px;
 }
@@ -631,6 +659,15 @@ body {
 @media (max-width: 760px) {
   .logo-img {
     height: 46px;
+  }
+
+  #navbar .logo-img {
+    height: 42px;
+  }
+
+  #navbar .nav-logo {
+    padding: 2px 8px;
+    border-radius: 14px;
   }
 
   #footer .logo-img {
