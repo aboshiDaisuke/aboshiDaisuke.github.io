@@ -849,12 +849,18 @@ dd {
   padding-top: 12px;
 }
 
-.works-grid-tools {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+/* Three across on a 6-track grid, so a short last row can sit centered */
+.works-grid-tools,
+.works-grid-games {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
-.works-grid-games {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+.works-grid > .work-card {
+  grid-column: span 2;
+}
+
+.works-grid-tools > .work-card:nth-child(4) {
+  grid-column: 2 / span 2;
 }
 
 .work-card {
@@ -1241,7 +1247,16 @@ dd {
 
   .works-grid-tools,
   .works-grid-games {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .works-grid-tools > .work-card:nth-child(4) {
+    grid-column: span 2;
+  }
+
+  .works-grid-tools > .work-card:nth-child(5),
+  .works-grid-games > .work-card:nth-child(3) {
+    grid-column: 2 / span 2;
   }
 }
 
@@ -1383,6 +1398,12 @@ dd {
   .works-grid-games,
   .works-grid {
     grid-template-columns: 1fr;
+  }
+
+  .works-grid > .work-card,
+  .works-grid-tools > .work-card:nth-child(n),
+  .works-grid-games > .work-card:nth-child(n) {
+    grid-column: auto;
   }
 
   .work-card,

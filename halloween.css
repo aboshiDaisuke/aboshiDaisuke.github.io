@@ -51,9 +51,11 @@ body {
 }
 
 /* ---------- Glows ---------- */
+/* The gradients already fade out, so skip the costly full-screen blur */
 .bg-aura span {
   mix-blend-mode: screen;
   opacity: 0.28;
+  filter: none;
 }
 
 .bg-aura span:nth-child(1) {
@@ -584,6 +586,23 @@ body {
 .hero-visual .hero-image {
   max-height: clamp(430px, 56vw, 760px);
   object-position: 30% 40%;
+}
+
+/* WebGL depth layer from hero-depth.js, laid over the still image */
+.hero-depth {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.hero-depth.is-ready {
+  opacity: 1;
 }
 
 .to-top {
