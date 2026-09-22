@@ -91,22 +91,9 @@ body {
   background: radial-gradient(circle, rgba(255, 61, 139, 0.4), transparent 70%);
 }
 
-/* Floating bats / ghosts / pumpkins */
-.bg-glitter .sparkle {
-  background: none;
-  color: var(--ghost);
-  text-shadow: 0 0 10px rgba(255, 122, 26, 0.45);
-  animation-name: spook-rise;
-}
-
-@keyframes spook-rise {
-  0% { transform: translate(0, 0) rotate(-8deg) scale(0.7); opacity: 0; }
-  10% { opacity: 0.85; }
-  25% { transform: translate(18px, -26vh) rotate(8deg) scale(0.9); }
-  50% { transform: translate(-14px, -52vh) rotate(-8deg) scale(1); }
-  75% { transform: translate(16px, -78vh) rotate(8deg) scale(0.95); }
-  90% { opacity: 0.75; }
-  100% { transform: translate(0, -104vh) rotate(-6deg) scale(0.8); opacity: 0; }
+/* The rising sparkles are switched off for Halloween */
+.bg-glitter {
+  display: none;
 }
 
 /* ---------- Navbar ---------- */
@@ -198,30 +185,17 @@ body {
   box-shadow: 6px 6px 0 var(--pumpkin), 0 0 0 3px rgba(184, 255, 61, 0.14), 0 22px 60px rgba(0, 0, 0, 0.5);
 }
 
-/* Cobwebs clinging to the hero frame corners */
-.hero-visual::before,
-.hero-visual::after {
+/* Cobweb in the top-left corner of the hero frame */
+.hero-visual::before {
   content: "";
   position: absolute;
-  z-index: 5;
-  aspect-ratio: 1;
-  pointer-events: none;
-  background: url("cobweb.svg?v=1") no-repeat top left / contain;
-  filter: drop-shadow(0 1px 2px rgba(20, 8, 36, 0.55));
-}
-
-.hero-visual::before {
   top: -4px;
   left: -4px;
-  width: clamp(140px, 17vw, 250px);
-}
-
-.hero-visual::after {
-  right: -4px;
-  bottom: -4px;
-  width: clamp(90px, 10vw, 150px);
-  opacity: 0.85;
-  transform: scale(-1, -1);
+  z-index: 5;
+  width: clamp(100px, 12vw, 160px);
+  aspect-ratio: 1;
+  pointer-events: none;
+  background: url("cobweb.svg?v=2") no-repeat top left / contain;
 }
 
 /* Spider dangling from the top edge of the hero frame */
@@ -444,14 +418,6 @@ body {
 @media (max-width: 760px) {
   .logo-img {
     height: 46px;
-  }
-
-  .hero-visual::before {
-    width: 120px;
-  }
-
-  .hero-visual::after {
-    display: none;
   }
 
   #footer .logo-img {
