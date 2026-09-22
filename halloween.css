@@ -220,12 +220,11 @@ body {
   background: none;
 }
 
-#hero::before {
-  border-color: var(--gold);
-}
-
+/* The base doodles sit behind the photo frame here and only a gold sliver
+   peeked out past its edge, so they are dropped */
+#hero::before,
 #hero::after {
-  background: repeating-linear-gradient(90deg, var(--pink) 0 16px, var(--gold) 16px 22px, transparent 22px 30px);
+  display: none;
 }
 
 .hero-visual {
