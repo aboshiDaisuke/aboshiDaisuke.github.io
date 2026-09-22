@@ -7,7 +7,7 @@
   <title>ABS Mart｜ブラウザで使える無料Webツール＆ゲーム（PDF編集・字幕変換・3Dゲーム）</title>
   <meta name="description" content="インストール・登録不要で使える無料のブラウザツール＆ゲーム集。PDF編集、字幕変換、MP3結合、あみだくじ、予算管理、3Dカートレース、夜桜散策、シューティングゲームを公開しています。" />
   <link rel="canonical" href="https://abs-mart.net/" />
-  <meta name="theme-color" content="#ff2f9a" />
+  <meta name="theme-color" content="#140a12" />
   <meta property="og:title" content="ABS Mart｜ブラウザで使える無料Webツール＆ゲーム" />
   <meta property="og:description" content="PDF編集・字幕変換・MP3結合・あみだくじ・予算管理・3Dゲーム・シューティング。インストール・登録不要で使えるブラウザツール＆ゲーム集。" />
   <meta property="og:image" content="https://abs-mart.net/abs_mart_share.jpg?v=20260815-tools-games" />
@@ -26,9 +26,13 @@
   <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="image" href="abs_mart_hero_poster.jpg?v=4" fetchpriority="high" />
+  <link rel="preload" as="image" type="image/webp" imagesrcset="hero_halloween_768.webp?v=2 768w, hero_halloween_1280.webp?v=2 1280w, hero_halloween_1672.webp?v=2 1672w" imagesizes="(max-width: 1360px) 100vw, 1360px" fetchpriority="high" />
+  <link rel="preload" as="image" href="abs_mart_logo_halloween.webp?v=1" />
   <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&amp;family=M+PLUS+Rounded+1c:wght@400;500;700;800&amp;family=Rowdies:wght@700&amp;family=Yomogi&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=20260822-gal3" />
+  <link rel="stylesheet" href="style.css?v=20260922-top1" />
+  <link rel="stylesheet" href="halloween.css?v=20260922-gal4" />
+  <script>self.ModelViewerElement={meshoptDecoderLocation:"https://cdn.jsdelivr.net/npm/meshoptimizer@0.22.0/meshopt_decoder.js"};</script>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -128,10 +132,7 @@
   <nav id="navbar" aria-label="Primary">
     <div class="nav-inner">
       <a href="#hero" class="nav-logo" aria-label="ABS Mart top">
-        <span class="logo-lockup">
-          <span class="logo-main">ABS Mart</span>
-          <span class="logo-charm" aria-hidden="true">♡</span>
-        </span>
+        <img class="logo-img" src="abs_mart_logo_halloween.webp?v=1" alt="ABS Mart" width="800" height="264" decoding="async" />
         <span class="logo-sub">Browser-first tools &amp; games</span>
       </a>
       <div class="nav-actions">
@@ -152,28 +153,30 @@
     <section id="hero">
       <div class="hero-inner">
         <div class="hero-visual" data-reveal data-reveal-delay="90">
+          <span class="hw-spider" aria-hidden="true">🕷️</span>
+          <model-viewer class="hw-ghost hw-ghost--pumpkin" src="models/halloween/pumpkin.glb?v=1" alt="かぼちゃのおばけ" loading="lazy" reveal="auto" camera-controls disable-zoom disable-pan disable-tap touch-action="pan-y" interaction-prompt="none" exposure="1.05"></model-viewer>
           <div class="hero-photo">
             <div class="hero-stickers" aria-hidden="true">
-              <span class="sticker sticker-kami">神♡</span>
-              <span class="sticker sticker-free">FREE</span>
-              <span class="sticker sticker-pop">POP!!</span>
+              <span class="sticker sticker-kami">神🎃</span>
+              <span class="sticker sticker-free">TREAT</span>
+              <span class="sticker sticker-pop">BOO!!</span>
             </div>
-            <video class="hero-video" width="1280" height="720" autoplay muted loop playsinline preload="auto" poster="abs_mart_hero_poster.jpg?v=4" aria-label="ABS MartのイメージキャラクターとWebツールのアニメーション">
-              <source src="abs_mart_hero.mp4?v=4" type="video/mp4" />
-              <img src="abs_mart_hero_poster.jpg?v=4" alt="ABS MartのイメージキャラクターとWebツールのビジュアル" width="1280" height="720" />
-            </video>
+            <picture>
+              <source type="image/webp" srcset="hero_halloween_768.webp?v=2 768w, hero_halloween_1280.webp?v=2 1280w, hero_halloween_1672.webp?v=2 1672w" sizes="(max-width: 1360px) 100vw, 1360px" />
+              <img class="hero-image" src="hero_halloween_1280.jpg?v=2" alt="小悪魔の仮装をしたギャルが、満月の夜にジャック・オー・ランタンのお菓子バケツを持ってピースしているハロウィンのビジュアル" width="1672" height="941" fetchpriority="high" decoding="async" />
+            </picture>
           </div>
           <div class="hero-copy">
-            <p class="eyebrow" data-reveal data-reveal-delay="60" lang="en"><span class="dot" aria-hidden="true"></span>ABS Mart — Browser Tools &amp; Games</p>
+            <p class="eyebrow" data-reveal data-reveal-delay="60" lang="en"><span class="dot" aria-hidden="true"></span>Happy Halloween — ABS Mart</p>
             <h1 class="hero-title" data-reveal data-reveal-delay="120">
               てかその面倒、<br /><span class="hl hl-pink">ブラウザだけ</span>で<span class="hl hl-blue">ガチ秒で終わる♡</span>
             </h1>
             <p class="hero-lead" data-reveal data-reveal-delay="200">
-              PDF編集も字幕変換もMP3結合も、あみだくじも飲み会の予算管理も、ぜーんぶブラウザでよくない？♡ 作業に飽きたらカートレースも夜桜さんぽもシューティングも遊べちゃう。インストールも登録もマジ要らん無料ツール＆ゲーム集なんだけど〜！神じゃん？🫶
+              PDF編集も字幕変換もMP3結合も、あみだくじも飲み会の予算管理も、ぜーんぶブラウザでよくない？♡ 作業に飽きたらカートレースも夜桜さんぽもシューティングも遊べちゃう。インストールも登録もマジ要らん無料ツール＆ゲーム集なんだけど〜！イタズラなしのお菓子だけ、神じゃん？🎃
             </p>
             <div class="hero-actions" data-reveal data-reveal-delay="260">
               <a href="#works" class="btn btn-primary btn-lg">
-                <span>とりま触ってみ？♡</span>
+                <span>トリックオアトリート♡</span>
                 <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
               </a>
             </div>
@@ -184,10 +187,12 @@
     </section>
 
     <section id="points">
+      <model-viewer class="hw-ghost hw-ghost--witch" src="models/halloween/witch.glb?v=1" alt="まじょのおばけ" loading="lazy" reveal="auto" camera-controls disable-zoom disable-pan disable-tap touch-action="pan-y" interaction-prompt="none" exposure="1.05"></model-viewer>
+      <model-viewer class="hw-ghost hw-ghost--devil" src="models/halloween/devil.glb?v=1" alt="こあくまのおばけ" loading="lazy" reveal="auto" camera-controls disable-zoom disable-pan disable-tap touch-action="pan-y" interaction-prompt="none" exposure="1.05"></model-viewer>
       <div class="section-inner">
         <div class="section-heading center" data-reveal>
           <p class="eyebrow" lang="en">Point</p>
-          <h2 class="section-title">選ばなきゃ損じゃん？<br class="title-break" />神ポイント3つ♡</h2>
+          <h2 class="section-title">イタズラ無しの<br class="title-break" />神トリート3つ🎃</h2>
         </div>
 
         <div class="points-grid">
@@ -222,10 +227,11 @@
     </section>
 
     <section id="works">
+      <model-viewer class="hw-ghost hw-ghost--reaper" src="models/halloween/reaper.glb?v=1" alt="しにがみのおばけ" loading="lazy" reveal="auto" camera-controls disable-zoom disable-pan disable-tap touch-action="pan-y" interaction-prompt="none" exposure="1.05"></model-viewer>
       <div class="section-inner">
         <div class="section-heading" data-reveal>
           <p class="eyebrow" lang="en">Selected Works</p>
-          <h2 class="section-title">今アツいツール＆ゲームたち♡</h2>
+          <h2 class="section-title">今夜アツいツール＆ゲームたち👻</h2>
         </div>
 
         <div class="work-group">
@@ -314,6 +320,7 @@
         </div>
 
         <div class="work-group">
+          <model-viewer class="hw-ghost hw-ghost--mummy" src="models/halloween/mummy.glb?v=1" alt="ミイラのおばけ" loading="lazy" reveal="auto" camera-controls disable-zoom disable-pan disable-tap touch-action="pan-y" interaction-prompt="none" exposure="1.05"></model-viewer>
           <div class="work-group-heading" data-reveal>
             <p class="work-group-label" lang="en">Browser Games</p>
             <h3 class="work-group-title">ブラウザで遊べるゲーム♡</h3>
@@ -370,13 +377,11 @@
   </main>
 
   <footer id="footer">
+    <model-viewer class="hw-ghost hw-ghost--franken" src="models/halloween/franken.glb?v=1" alt="フランケンのおばけ" loading="lazy" reveal="auto" camera-controls disable-zoom disable-pan disable-tap touch-action="pan-y" interaction-prompt="none" exposure="1.05"></model-viewer>
     <div class="footer-inner">
       <div class="footer-brand">
         <a href="#hero" class="nav-logo" aria-label="ABS Mart top">
-          <span class="logo-lockup">
-            <span class="logo-main">ABS Mart</span>
-            <span class="logo-charm" aria-hidden="true">♡</span>
-          </span>
+          <img class="logo-img" src="abs_mart_logo_halloween.webp?v=1" alt="ABS Mart" width="800" height="264" loading="lazy" decoding="async" />
           <span class="logo-sub">Browser-first tools &amp; games</span>
         </a>
       </div>
@@ -389,6 +394,11 @@
     </div>
   </footer>
 
-  <script src="script.js?v=40260615-pop2"></script>
+  <a class="to-top" href="#hero" aria-label="ページの先頭へ戻る">
+    <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    <span lang="en">TOP</span>
+  </a>
+
+  <script src="script.js?v=20260922-top1"></script>
 </body>
 </html>

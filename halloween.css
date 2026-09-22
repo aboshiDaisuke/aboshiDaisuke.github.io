@@ -1,0 +1,659 @@
+/* ==========================================================
+   Halloween skin (gal edition) — loaded after style.css.
+   Remove the <link> to this file to return to the base look.
+   Palette follows the title logo: black, hot pink, gold, leopard.
+   ========================================================== */
+
+:root {
+  --hw-black: #140a12;
+  --hw-black-2: #22101d;
+  --hw-white: #ffffff;
+  --pumpkin: #ff7a1a;
+
+  --paper: var(--hw-black);
+  --bg-clean: var(--hw-black);
+  --ink: var(--hw-black);
+  --text: #2a1024;
+  --muted: #5c3a55;
+  --pink: #ff2f9a;
+  --pink-hot: #ff1488;
+  --pink-soft: #ffd4ec;
+  --gold: #ffc62e;
+  --cobalt: var(--hw-black);
+  --cobalt-deep: var(--hw-black);
+  --grape: #9b4dff;
+  --line: rgba(255, 47, 154, 0.4);
+  --shadow-sticker: 5px 5px 0 var(--hw-black);
+  --shadow-sticker-pink: 5px 5px 0 var(--pink);
+  --shadow-sticker-gold: 5px 5px 0 var(--gold);
+  --grad-gal: linear-gradient(120deg, #ff2f9a 0%, #ff1488 55%, #c2187a 100%);
+  --leopard: url("leopard.svg?v=1");
+}
+
+body {
+  background-image:
+    radial-gradient(900px 520px at 100% 0%, rgba(255, 47, 154, 0.26), transparent 60%),
+    radial-gradient(800px 480px at 0% 30%, rgba(155, 77, 255, 0.18), transparent 60%),
+    linear-gradient(rgba(20, 10, 18, 0.9), rgba(20, 10, 18, 0.9)),
+    var(--leopard);
+  background-color: #3a1830;
+  background-size: auto, auto, auto, 120px 120px;
+  background-attachment: fixed;
+}
+
+::selection {
+  background: var(--pink);
+  color: var(--hw-white);
+}
+
+:focus-visible {
+  outline-color: var(--gold);
+}
+
+/* ---------- Glows ---------- */
+.bg-aura span {
+  mix-blend-mode: screen;
+  opacity: 0.28;
+}
+
+.bg-aura span:nth-child(1) {
+  background: radial-gradient(circle, rgba(255, 47, 154, 0.6), transparent 70%);
+}
+
+.bg-aura span:nth-child(2) {
+  background: radial-gradient(circle, rgba(155, 77, 255, 0.5), transparent 70%);
+}
+
+.bg-aura span:nth-child(3) {
+  background: radial-gradient(circle, rgba(255, 198, 46, 0.35), transparent 70%);
+}
+
+.bg-aura span:nth-child(4) {
+  background: radial-gradient(circle, rgba(255, 122, 26, 0.35), transparent 70%);
+}
+
+/* The rising sparkles are switched off for Halloween */
+.bg-glitter {
+  display: none;
+}
+
+/* ---------- Navbar ---------- */
+#navbar {
+  background: rgba(20, 10, 18, 0.9);
+  border-bottom: 4px solid var(--pink);
+  box-shadow: 0 4px 0 var(--gold);
+}
+
+#navbar.is-scrolled {
+  background: rgba(20, 10, 18, 0.96);
+  box-shadow: 0 4px 0 var(--gold), 0 10px 24px rgba(0, 0, 0, 0.4);
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  #navbar {
+    background: rgba(20, 10, 18, 0.98);
+  }
+}
+
+/* Halloween title logo image */
+.logo-img {
+  display: block;
+  width: auto;
+  height: 56px;
+  filter: drop-shadow(0 3px 8px rgba(255, 47, 154, 0.4));
+  transition: transform var(--transition);
+}
+
+.nav-logo:hover .logo-img,
+.nav-logo:focus-visible .logo-img {
+  transform: rotate(-2deg) scale(1.04);
+}
+
+#navbar .logo-sub {
+  display: none;
+}
+
+#footer .logo-img {
+  height: 84px;
+}
+
+#footer .logo-sub {
+  margin-top: 4px;
+}
+
+.nav-link,
+.nav-link:first-child,
+.nav-link:nth-child(2) {
+  border: 3px solid var(--hw-black);
+  box-shadow: 3px 3px 0 var(--hw-white);
+}
+
+.nav-link:first-child {
+  background: var(--pink);
+  color: var(--hw-white);
+}
+
+.nav-link:nth-child(2) {
+  background: var(--gold);
+  color: var(--hw-black);
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+  box-shadow: 5px 5px 0 var(--hw-white);
+}
+
+/* ---------- Shared labels ---------- */
+.eyebrow {
+  padding: 4px 14px 5px;
+  border: 2px solid var(--hw-black);
+  border-radius: var(--pill);
+  background: var(--pink);
+  color: var(--hw-white);
+  box-shadow: 2px 2px 0 var(--hw-black);
+}
+
+.eyebrow .dot {
+  background: var(--gold);
+  box-shadow: 0 0 0 2px var(--hw-black);
+}
+
+/* Section titles sit on white sticker plates so they read on the dark leopard */
+.section-title {
+  display: inline-block;
+  justify-self: start;
+  padding: 10px 22px 12px;
+  border: 3px solid var(--hw-black);
+  border-radius: 18px;
+  background: var(--hw-white);
+  color: var(--hw-black);
+  box-shadow: 6px 6px 0 var(--pink);
+  transform: rotate(-1deg);
+}
+
+#works .section-title::after {
+  display: none;
+}
+
+#works .section-heading .eyebrow {
+  justify-self: start;
+  color: var(--hw-white);
+}
+
+.work-group-title {
+  color: var(--hw-white);
+  text-shadow: 2px 2px 0 var(--pink-hot);
+}
+
+/* ---------- Hero ---------- */
+#hero {
+  background: none;
+}
+
+#hero::before {
+  border-color: var(--gold);
+}
+
+#hero::after {
+  background: repeating-linear-gradient(90deg, var(--pink) 0 16px, var(--gold) 16px 22px, transparent 22px 30px);
+}
+
+.hero-visual {
+  border-color: var(--hw-white);
+  background: var(--hw-white);
+  box-shadow: 8px 8px 0 var(--pink), 0 22px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Spider dangling from the top edge of the hero frame */
+.hw-spider {
+  position: absolute;
+  top: 0;
+  left: 40%;
+  z-index: 5;
+  display: block;
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  line-height: 1;
+  pointer-events: none;
+  translate: 0 80px;
+  transform-origin: 50% -80px;
+  animation: spider-swing 4.8s ease-in-out infinite;
+}
+
+.hw-spider::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 90%;
+  width: 1.5px;
+  height: 80px;
+  background: var(--hw-black);
+  transform: translateX(-50%);
+}
+
+@keyframes spider-swing {
+  0%, 100% { rotate: -7deg; }
+  50% { rotate: 7deg; }
+}
+
+.sticker {
+  border: 3px solid var(--hw-black);
+  text-shadow: none;
+}
+
+.sticker-kami {
+  background: var(--pink);
+  color: var(--hw-white);
+  box-shadow: 4px 4px 0 var(--hw-black);
+  font-size: 1.45rem;
+  -webkit-text-stroke: 1px var(--hw-black);
+  paint-order: stroke fill;
+}
+
+.sticker-free {
+  background: var(--gold);
+  color: var(--hw-black);
+  box-shadow: 4px 4px 0 var(--hw-black);
+}
+
+.sticker-pop {
+  background: var(--hw-black);
+  color: var(--pink);
+  border-color: var(--pink);
+  box-shadow: 4px 4px 0 var(--gold);
+}
+
+.hero-copy {
+  border: 4px solid var(--hw-black);
+  background: var(--hw-white);
+  box-shadow: 8px 8px 0 var(--pink), 0 18px 38px rgba(0, 0, 0, 0.35);
+}
+
+.hero-copy::before {
+  content: "🎃";
+  background: var(--hw-black);
+  border-color: var(--gold);
+  box-shadow: 3px 3px 0 var(--pink);
+  font-size: 1.1rem;
+}
+
+.hero-title {
+  color: var(--hw-black);
+}
+
+/* Solid marker highlights instead of gradient text, for legibility */
+.hero-title .hl-pink {
+  padding: 0 0.14em;
+  border-radius: 8px;
+  background: var(--pink);
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  color: var(--hw-white);
+  -webkit-text-stroke: 0.035em var(--hw-black);
+  paint-order: stroke fill;
+  box-shadow: 4px 4px 0 var(--hw-black);
+  transform: rotate(-1.5deg);
+}
+
+.hero-title .hl-blue {
+  margin-top: 0.08em;
+  background: linear-gradient(transparent 60%, var(--gold) 60% 94%, transparent 94%);
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  color: var(--hw-black);
+}
+
+.hero-lead {
+  color: var(--text);
+}
+
+.btn-primary {
+  border-color: var(--hw-black);
+  color: var(--hw-white);
+  box-shadow: 5px 5px 0 var(--hw-black);
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  box-shadow: 8px 8px 0 var(--gold), 0 0 0 3px var(--hw-black);
+}
+
+/* ---------- Points: pink leopard band ---------- */
+#points {
+  background:
+    linear-gradient(rgba(255, 47, 154, 0.86), rgba(255, 47, 154, 0.86)),
+    var(--leopard) 0 0 / 120px 120px,
+    var(--pink);
+  border-top: 4px solid var(--hw-black);
+  border-bottom: 4px solid var(--hw-black);
+}
+
+#points .eyebrow {
+  background: var(--hw-black);
+  color: var(--gold);
+  border-color: var(--hw-black);
+  box-shadow: 2px 2px 0 var(--hw-white);
+}
+
+#points .section-title {
+  box-shadow: 6px 6px 0 var(--hw-black);
+}
+
+.point-card,
+.point-card:nth-child(2),
+.point-card:nth-child(3) {
+  border: 3px solid var(--hw-black);
+  background: var(--hw-white);
+  box-shadow: 6px 6px 0 var(--hw-black);
+}
+
+.point-card::after {
+  content: "🎃";
+  font-family: inherit;
+  font-size: 1.4rem;
+}
+
+.point-card:nth-child(2)::after {
+  content: "👻";
+}
+
+.point-card:nth-child(3)::after {
+  content: "🦇";
+}
+
+.point-card:hover,
+.js .point-card[data-reveal].is-revealed:hover {
+  box-shadow: 8px 8px 0 var(--gold), 0 0 0 3px var(--hw-black);
+}
+
+.point-icon,
+.point-card:nth-child(2) .point-icon,
+.point-card:nth-child(3) .point-icon {
+  border-color: var(--hw-black);
+  box-shadow: 3px 3px 0 var(--hw-black);
+}
+
+.point-icon {
+  color: var(--pink-hot);
+  background: var(--pink-soft);
+}
+
+.point-card:nth-child(2) .point-icon {
+  color: var(--hw-black);
+  background: var(--gold);
+}
+
+.point-card:nth-child(3) .point-icon {
+  color: var(--hw-white);
+  background: var(--hw-black);
+  box-shadow: 3px 3px 0 var(--pink);
+}
+
+.point-no {
+  color: var(--pink-hot);
+  font-weight: 700;
+}
+
+.point-title {
+  font-size: 1.28rem;
+}
+
+/* ---------- Tiny 3D ghosts scattered around ---------- */
+#works,
+.work-group {
+  position: relative;
+}
+
+.hw-ghost {
+  position: absolute;
+  z-index: 6;
+  display: block;
+  width: var(--ghost-size, clamp(84px, 9vw, 128px));
+  height: auto;
+  aspect-ratio: 1;
+  background: transparent;
+  cursor: grab;
+  --poster-color: transparent;
+  --progress-bar-height: 0px;
+  filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.4));
+  animation: ghost-bob 4.6s ease-in-out infinite;
+}
+
+.hw-ghost:active {
+  cursor: grabbing;
+}
+
+.hw-ghost:focus-visible {
+  outline: 3px dashed var(--gold);
+  outline-offset: 2px;
+  border-radius: 50%;
+}
+
+@keyframes ghost-bob {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -12px; }
+}
+
+.hw-ghost--pumpkin {
+  left: -28px;
+  bottom: -48px;
+  --ghost-size: clamp(96px, 10vw, 150px);
+}
+
+.hw-ghost--witch {
+  top: 18px;
+  left: max(var(--gutter), calc(50% - 560px));
+  animation-delay: -1.2s;
+}
+
+.hw-ghost--devil {
+  top: 34px;
+  right: max(var(--gutter), calc(50% - 560px));
+  animation-delay: -2.6s;
+}
+
+.hw-ghost--reaper {
+  top: 20px;
+  right: max(var(--gutter), calc(50% - 620px));
+  animation-delay: -0.6s;
+}
+
+.hw-ghost--mummy {
+  top: -58px;
+  right: 2%;
+  --ghost-size: clamp(76px, 8vw, 110px);
+  animation-delay: -3.4s;
+}
+
+.hw-ghost--franken {
+  top: -78px;
+  right: max(var(--gutter), calc(50% - 560px));
+  --ghost-size: clamp(80px, 8.5vw, 116px);
+  animation-delay: -1.8s;
+}
+
+/* ---------- Works ---------- */
+#works {
+  background: none;
+}
+
+#works .section-heading:not(.center) {
+  border-bottom: 4px dotted var(--pink);
+}
+
+.work-group + .work-group {
+  border-top: 4px dotted var(--gold);
+}
+
+.work-group-label,
+.work-group + .work-group .work-group-label {
+  border: 2px solid var(--hw-black);
+  box-shadow: 3px 3px 0 var(--hw-white);
+}
+
+.work-group-label {
+  background: var(--pink);
+  color: var(--hw-white);
+}
+
+.work-group + .work-group .work-group-label {
+  background: var(--gold);
+  color: var(--hw-black);
+}
+
+.work-card {
+  border: 3px solid var(--hw-black);
+  background: var(--hw-white);
+  box-shadow: 7px 7px 0 var(--pink);
+}
+
+.work-card:nth-child(even) {
+  box-shadow: 7px 7px 0 var(--gold);
+}
+
+/* Masking tape turns into leopard tape */
+.work-card::before,
+.work-card:nth-child(even)::before {
+  background: var(--leopard) 0 0 / 60px 60px, #e8b04a;
+  border: 2px solid var(--hw-black);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
+}
+
+.work-card:nth-child(even)::before {
+  background: var(--leopard) 0 0 / 60px 60px, var(--pink);
+}
+
+.work-card:hover,
+.js .work-card[data-reveal].is-revealed:hover {
+  box-shadow: 9px 9px 0 var(--pink), 0 0 0 3px var(--hw-black);
+}
+
+.work-thumb {
+  border-color: var(--hw-black);
+  background: var(--pink-soft);
+}
+
+.work-icon {
+  border-color: var(--hw-black);
+  box-shadow: 3px 3px 0 var(--hw-black);
+}
+
+.work-cat {
+  color: var(--pink-hot);
+  font-weight: 700;
+}
+
+.work-title {
+  font-size: 1.12rem;
+}
+
+.work-desc {
+  color: var(--muted);
+}
+
+/* ---------- Footer ---------- */
+#footer {
+  background: var(--hw-black);
+  border-top: 4px solid var(--hw-black);
+}
+
+/* Pink leopard strip across the top of the footer */
+#footer::before {
+  height: 22px;
+  background: var(--leopard) 0 0 / 60px 60px, var(--pink);
+  border-bottom: 3px solid var(--gold);
+}
+
+.footer-nav a {
+  color: var(--hw-white);
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus-visible {
+  color: var(--pink);
+}
+
+.footer-copy {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ---------- Hero still image & back-to-top ---------- */
+.hero-photo picture {
+  display: block;
+}
+
+.hero-visual .hero-image {
+  max-height: clamp(430px, 56vw, 760px);
+  object-position: 30% 40%;
+}
+
+.to-top {
+  border-color: var(--hw-black);
+  background: var(--pink);
+  box-shadow: 4px 4px 0 var(--hw-black), 0 0 0 3px var(--gold);
+}
+
+.to-top:hover,
+.to-top:focus-visible {
+  box-shadow: 6px 6px 0 var(--hw-black), 0 0 0 3px var(--gold);
+}
+
+/* ---------- Responsive tweaks ---------- */
+@media (max-width: 1080px) {
+  .hero-visual .hero-image {
+    max-height: none;
+  }
+
+  .hw-spider {
+    left: auto;
+    right: 18%;
+  }
+}
+
+@media (max-width: 760px) {
+  .logo-img {
+    height: 46px;
+  }
+
+  #footer .logo-img {
+    height: 70px;
+  }
+
+  .section-title {
+    padding: 8px 14px 10px;
+  }
+
+  .hw-ghost {
+    --ghost-size: 68px;
+  }
+
+  .hw-ghost--pumpkin {
+    left: -12px;
+    bottom: -34px;
+    --ghost-size: 78px;
+  }
+
+  .hw-ghost--witch,
+  .hw-ghost--devil {
+    top: 8px;
+  }
+
+  .hw-ghost--reaper {
+    top: 0;
+  }
+
+  .hw-ghost--mummy {
+    top: -48px;
+    --ghost-size: 62px;
+  }
+
+  .hw-ghost--franken {
+    top: -58px;
+    --ghost-size: 64px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hw-spider {
+    animation: none;
+  }
+}
