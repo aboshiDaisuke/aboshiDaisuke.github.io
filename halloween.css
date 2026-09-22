@@ -127,15 +127,30 @@ body {
   }
 }
 
-.logo-main {
-  color: var(--pumpkin);
-  -webkit-text-stroke-color: var(--night-3);
-  text-shadow: 3px 3px 0 var(--cobalt);
+/* Halloween title logo image */
+.logo-img {
+  display: block;
+  width: auto;
+  height: 56px;
+  filter: drop-shadow(0 3px 8px rgba(255, 47, 154, 0.35));
+  transition: transform var(--transition);
 }
 
-.logo-charm {
-  color: var(--slime);
-  text-shadow: 1px 1px 0 var(--night), 2px 2px 0 var(--cobalt);
+.nav-logo:hover .logo-img,
+.nav-logo:focus-visible .logo-img {
+  transform: rotate(-2deg) scale(1.04);
+}
+
+#navbar .logo-sub {
+  display: none;
+}
+
+#footer .logo-img {
+  height: 84px;
+}
+
+#footer .logo-sub {
+  margin-top: 4px;
 }
 
 .logo-sub {
@@ -183,17 +198,30 @@ body {
   box-shadow: 6px 6px 0 var(--pumpkin), 0 0 0 3px rgba(184, 255, 61, 0.14), 0 22px 60px rgba(0, 0, 0, 0.5);
 }
 
-/* Cobweb in the top-left corner of the hero frame */
-.hero-visual::before {
+/* Cobwebs clinging to the hero frame corners */
+.hero-visual::before,
+.hero-visual::after {
   content: "";
   position: absolute;
-  top: -6px;
-  left: -6px;
   z-index: 5;
-  width: clamp(90px, 12vw, 150px);
   aspect-ratio: 1;
   pointer-events: none;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%23fff8f0' stroke-width='1.3' stroke-linecap='round' opacity='.85'%3E%3Cpath d='M0 0 100 12M0 0 78 50M0 0 50 78M0 0 12 100'/%3E%3Cpath d='M22 3Q20 11 18 14Q13 18 3 22'/%3E%3Cpath d='M44 6Q38 20 34 26Q26 36 6 44'/%3E%3Cpath d='M68 9Q58 30 52 40Q40 56 9 68'/%3E%3Cpath d='M92 11Q78 40 70 54Q54 76 11 92'/%3E%3C/svg%3E") no-repeat top left / contain;
+  background: url("cobweb.svg?v=1") no-repeat top left / contain;
+  filter: drop-shadow(0 1px 2px rgba(20, 8, 36, 0.55));
+}
+
+.hero-visual::before {
+  top: -4px;
+  left: -4px;
+  width: clamp(140px, 17vw, 250px);
+}
+
+.hero-visual::after {
+  right: -4px;
+  bottom: -4px;
+  width: clamp(90px, 10vw, 150px);
+  opacity: 0.85;
+  transform: scale(-1, -1);
 }
 
 /* Spider dangling from the top edge of the hero frame */
@@ -337,6 +365,127 @@ body {
 
 .point-card:nth-child(3) .point-icon {
   background: #f3e9ff;
+}
+
+/* ---------- Tiny 3D ghosts scattered around ---------- */
+#works,
+.work-group {
+  position: relative;
+}
+
+.hw-ghost {
+  position: absolute;
+  z-index: 6;
+  display: block;
+  width: var(--ghost-size, clamp(84px, 9vw, 128px));
+  height: auto;
+  aspect-ratio: 1;
+  background: transparent;
+  cursor: grab;
+  --poster-color: transparent;
+  --progress-bar-height: 0px;
+  filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.4));
+  animation: ghost-bob 4.6s ease-in-out infinite;
+}
+
+.hw-ghost:active {
+  cursor: grabbing;
+}
+
+.hw-ghost:focus-visible {
+  outline: 3px dashed var(--slime);
+  outline-offset: 2px;
+  border-radius: 50%;
+}
+
+@keyframes ghost-bob {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -12px; }
+}
+
+.hw-ghost--pumpkin {
+  left: -28px;
+  bottom: -48px;
+  --ghost-size: clamp(96px, 10vw, 150px);
+}
+
+.hw-ghost--witch {
+  top: 18px;
+  left: max(var(--gutter), calc(50% - 560px));
+  animation-delay: -1.2s;
+}
+
+.hw-ghost--devil {
+  top: 34px;
+  right: max(var(--gutter), calc(50% - 560px));
+  animation-delay: -2.6s;
+}
+
+.hw-ghost--reaper {
+  top: 20px;
+  right: max(var(--gutter), calc(50% - 620px));
+  animation-delay: -0.6s;
+}
+
+.hw-ghost--mummy {
+  top: -58px;
+  right: 2%;
+  --ghost-size: clamp(76px, 8vw, 110px);
+  animation-delay: -3.4s;
+}
+
+.hw-ghost--franken {
+  top: -78px;
+  right: max(var(--gutter), calc(50% - 560px));
+  --ghost-size: clamp(80px, 8.5vw, 116px);
+  animation-delay: -1.8s;
+}
+
+@media (max-width: 760px) {
+  .logo-img {
+    height: 46px;
+  }
+
+  .hero-visual::before {
+    width: 120px;
+  }
+
+  .hero-visual::after {
+    display: none;
+  }
+
+  #footer .logo-img {
+    height: 70px;
+  }
+
+  .hw-ghost {
+    --ghost-size: 68px;
+  }
+
+  .hw-ghost--pumpkin {
+    left: -12px;
+    bottom: -34px;
+    --ghost-size: 78px;
+  }
+
+  .hw-ghost--witch,
+  .hw-ghost--devil {
+    top: 8px;
+  }
+
+  .hw-ghost--reaper {
+    top: 0;
+  }
+
+  .hw-ghost--mummy {
+    top: -48px;
+    --ghost-size: 62px;
+  }
+
+  .hw-ghost--franken {
+    top: -58px;
+    --ghost-size: 64px;
+  }
 }
 
 /* ---------- Works ---------- */
