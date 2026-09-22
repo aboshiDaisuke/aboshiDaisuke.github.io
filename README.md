@@ -23,6 +23,33 @@ HTML / CSS / 最小限の JavaScript のみで構成し、フレームワーク�
 | 07 | 夜桜詣（3D散策ゲーム） | https://yozakura.pages.dev/ |
 | 08 | GRO-CHAN SKY BLASTER（シューティングゲーム） | https://grochan-sky-blaster.pages.dev/ |
 
+## 季節デザイン：ハロウィン版（2026）
+
+2026年のハロウィン期間は、ギャル×ハロウィン仕様で公開しています。
+
+- 上書きスタイル：`halloween.css`（`style.css` の後に読み込み）
+- タイトルロゴ：`abs_mart_logo_halloween.webp`
+- トップ画像：`hero_halloween_*.webp` / `hero_halloween_1280.jpg`（動画の代わり）
+- 3Dおばけ：`models/halloween/*.glb`（[model-viewer](https://modelviewer.dev/) で表示）
+- ヒョウ柄タイル：`leopard.svg`
+- 上に戻るボタン：`style.css` / `script.js` に追加（通常版でもそのまま使えます）
+
+### 元に戻す方法
+
+ハロウィン版の直前の状態に、タグ `pre-halloween-2026` を付けてあります。
+ハロウィン版はマージコミット1つにまとめて `main` に入れているので、そのマージを打ち消せば元に戻ります。
+
+```sh
+# ハロウィン版のマージコミットを探す
+git log --merges --oneline -- halloween.css
+
+# そのマージを打ち消して公開する
+git revert -m 1 <マージコミット>
+git push origin main
+```
+
+ファイルを丸ごとハロウィン前に戻したい場合は、`git checkout pre-halloween-2026 -- .` のあとでコミットします（ハロウィン以降の変更も消えるので注意）。
+
 ## ファイル構成
 
 ```
