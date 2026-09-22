@@ -81,7 +81,8 @@ const photoFrag = /* glsl */ `
     d = texture2D(uDepth, uv).r;
     uv = base + shift * (d - uFocus);
 
-    vec3 col = texture2D(uColor, uv).rgb;
+    // Negative LOD bias keeps downscaled phones as crisp as the <img>.
+    vec3 col = texture2D(uColor, uv, -0.6).rgb;
 
     // Violet-pink mist that only lives in the far background.
     vec2 fp = uv * vec2(2.6, 4.2) + vec2(uTime * 0.018, -uTime * 0.006);
@@ -163,6 +164,7 @@ async function init() {
   ]);
   // Pass pixels straight through so the canvas matches the <img> exactly.
   colorTex.colorSpace = THREE.NoColorSpace;
+  colorTex.anisotropy = 4;
   depthTex.colorSpace = THREE.NoColorSpace;
   depthTex.generateMipmaps = false;
   depthTex.minFilter = THREE.LinearFilter;
@@ -173,7 +175,9 @@ async function init() {
 
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: false, alpha: false, powerPreference: "low-power" });
   renderer.outputColorSpace = THREE.LinearSRGBColorSpace;
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.75));
+  // Full device resolution: any cap here gets upscaled by the browser and
+  // the art turns visibly soft next to the plain <img>.
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 3));
 
   const scene = new THREE.Scene();
   const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
@@ -289,7 +293,8 @@ async function init() {
 
     const intro = easeInOut(clamp((now - introStart) / 1800, 0, 1));
     shared.uIntro.value = intro;
-    applyCover(1 + 0.045 * intro);
+    // Just enough overscan for the largest shift (uStrength * uFocus per side).
+    applyCover(1 + 0.036 * intro);
 
     if (now - lastMove > 2500) {
       const t = shared.uTime.value;
