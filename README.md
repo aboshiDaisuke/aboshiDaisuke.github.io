@@ -41,7 +41,7 @@ HTML / CSS / 最小限の JavaScript のみで構成し、フレームワーク�
 
 ```sh
 # ハロウィン版のマージコミットを探す
-git log --merges --oneline -- halloween.css
+git log --merges --oneline --grep="Halloween"
 
 # そのマージを打ち消して公開する
 git revert -m 1 <マージコミット>
