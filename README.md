@@ -14,11 +14,11 @@ HTML / CSS / 最小限の JavaScript のみで構成し、フレームワーク�
 
 | # | ツール | リンク |
 |---|---|---|
-| 01 | SRT to FCPXML Editor（字幕変換） | https://abs-mart.net/srt-to-fcpxml/ |
-| 02 | Media to MP3 Merger（音声結合） | https://abs-mart.net/media-to-mp3-merger/ |
-| 03 | おみやげ配布あみだくじ（抽選） | https://abs-mart.net/amidakuji/ |
-| 04 | 飲み会 予算管理 | https://abs-mart.net/BBQ/ |
-| 05 | PDF Editor | https://abs-mart.net/pdf-editor/ |
+| 01 | SRT to FCPXML Editor（字幕変換） | https://aboshidaisuke.github.io/srt-to-fcpxml/ |
+| 02 | Media to MP3 Merger（音声結合） | https://aboshidaisuke.github.io/media-to-mp3-merger/ |
+| 03 | おみやげ配布あみだくじ（抽選） | https://aboshidaisuke.github.io/amidakuji/ |
+| 04 | 飲み会 予算管理 | https://aboshidaisuke.github.io/BBQ/ |
+| 05 | PDF Editor | https://aboshidaisuke.github.io/pdf-editor/ |
 | 06 | SUNSET DRIVE（3Dカートレーシング） | https://sunset-drive.pages.dev/ |
 | 07 | 夜桜詣（3D散策ゲーム） | https://yozakura.pages.dev/ |
 | 08 | GRO-CHAN SKY BLASTER（シューティングゲーム） | https://grochan-sky-blaster.pages.dev/ |
@@ -64,6 +64,7 @@ abs_mart_hero_poster.jpg       ヒーロー動画のポスター/フォールバ
 abs_mart_share.jpg             OG/Twitter共有画像
 work_*_generated.jpg           各ツールのビジュアル
 CNAME                          カスタムドメイン（abs-mart.net）
+<ツール名>/index.html           旧URL abs-mart.net/<ツール名>/ → aboshidaisuke.github.io/<ツール名>/ への転送ページ
 DOMAIN_MANAGEMENT.md           ドメイン管理メモ
 _src/                          画像の原本（AI生成ソース・gitignore）
 ```

@@ -10,7 +10,10 @@
 - **Cloudflareへ移管日**: 2026年5月5日
 - **更新期限**: 2028年2月28日
 - **更新料（目安）**: 約 $11.86 / 年（`.net` の卸売価格）
-- **用途**: GitHub全体のポートフォリオ・アプリ公開用（aboshiDaisuke.github.io）
+- **用途**: ABS Mart のLP専用（リポジトリ `aboshiDaisuke/abs-mart-site`）
+  - ドメインはこのリポジトリだけに設定。ユーザーサイト（`aboshiDaisuke.github.io` リポジトリ）には設定しない
+  - ユーザーサイトにドメインを付けると、全リポジトリの GitHub Pages が `abs-mart.net/<repo>/` 配下に巻き込まれるため
+  - 各ツールは `https://aboshidaisuke.github.io/<repo>/` で公開し、LPからリンクする
 
 ---
 
