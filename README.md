@@ -22,6 +22,8 @@ HTML / CSS / 最小限の JavaScript のみで構成し、フレームワーク�
 | 06 | SUNSET DRIVE（3Dカートレーシング） | https://sunset-drive.pages.dev/ |
 | 07 | 夜桜詣（3D散策ゲーム） | https://yozakura.pages.dev/ |
 | 08 | GRO-CHAN SKY BLASTER（シューティングゲーム） | https://grochan-sky-blaster.pages.dev/ |
+| 09 | ずんだもん動画制作キット | https://aboshidaisuke.github.io/zundamon-remotion/ |
+| 10 | 金萬 3D（3Dビューア・非公式ファンメイド） | https://aboshidaisuke.github.io/kinman-3d/ |
 
 ## 季節デザイン：ハロウィン版（2026）
 
