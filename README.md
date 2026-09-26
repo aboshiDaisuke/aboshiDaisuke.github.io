@@ -1,31 +1,31 @@
 # ABS Mart — ランディングページ
 
-ブラウザだけで使える無料Webツール＆ゲーム集 **[ABS Mart](https://abs-mart.net/)** の紹介用ランディングページです。
+ブラウザで遊べる・使える無料ゲーム＆Webツール集 **[ABS Mart](https://abs-mart.net/)** の紹介用ランディングページです。
 GitHub Pages でホスティングしています。
 
 🔗 公開URL: **https://abs-mart.net/**
 
 ## 概要
 
-インストール・登録不要で使えるブラウザツールとゲームを紹介する、静的な1ページサイトです。
+ブラウザで遊べる・使えるゲームとツールを紹介する、静的な1ページサイトです（ずんだもん動画制作キットはPCに入れて使う制作キット、こえくらべは各自のGemini APIキーで動く仕組みです）。
 HTML / CSS / 最小限の JavaScript のみで構成し、フレームワーク・ビルド工程はありません。
 
-## 紹介しているツール＆ゲーム
+## 紹介しているゲーム＆ツール
 
-| # | ツール | リンク |
+| # | ゲーム・ツール | リンク |
 |---|---|---|
-| 01 | SRT to FCPXML Editor（字幕変換） | https://aboshidaisuke.github.io/srt-to-fcpxml/ |
-| 02 | Media to MP3 Merger（音声結合） | https://aboshidaisuke.github.io/media-to-mp3-merger/ |
-| 03 | おみやげ配布あみだくじ（抽選） | https://aboshidaisuke.github.io/amidakuji/ |
-| 04 | 飲み会 予算管理 | https://aboshidaisuke.github.io/BBQ/ |
-| 05 | PDF Editor | https://aboshidaisuke.github.io/pdf-editor/ |
-| 06 | SUNSET DRIVE（3Dカートレーシング） | https://sunset-drive.pages.dev/ |
-| 07 | 夜桜詣（3D散策ゲーム） | https://yozakura.pages.dev/ |
-| 08 | GRO-CHAN SKY BLASTER（シューティングゲーム） | https://grochan-sky-blaster.pages.dev/ |
-| 09 | ずんだもん動画制作キット | https://aboshidaisuke.github.io/zundamon-remotion/ |
-| 10 | 金萬 3D（3Dビューア・非公式ファンメイド） | https://aboshidaisuke.github.io/kinman-3d/ |
-| 11 | 鮨図鑑（鮨ネタクイズゲーム） | https://sushi-zukan.pages.dev/ |
-| 12 | こえくらべ（Gemini TTS 聴きくらべ・非公式） | https://koekurabe-app.web.app/ |
+| 01 | 鮨図鑑（鮨ネタクイズゲーム） | https://sushi-zukan.pages.dev/ |
+| 02 | GRO-CHAN SKY BLASTER（シューティングゲーム） | https://grochan-sky-blaster.pages.dev/ |
+| 03 | SUNSET DRIVE（3Dカートレーシング） | https://sunset-drive.pages.dev/ |
+| 04 | 夜桜詣（3D散策ゲーム） | https://yozakura.pages.dev/ |
+| 05 | 金萬 3D（3Dビューア・非公式ファンメイド） | https://aboshidaisuke.github.io/kinman-3d/ |
+| 06 | ずんだもん動画制作キット | https://aboshidaisuke.github.io/zundamon-remotion/ |
+| 07 | こえくらべ（Gemini TTS 聴きくらべ・非公式） | https://koekurabe-app.web.app/ |
+| 08 | おみやげ配布あみだくじ（抽選） | https://aboshidaisuke.github.io/amidakuji/ |
+| 09 | SRT to FCPXML Editor（字幕変換） | https://aboshidaisuke.github.io/srt-to-fcpxml/ |
+| 10 | Media to MP3 Merger（音声結合） | https://aboshidaisuke.github.io/media-to-mp3-merger/ |
+| 11 | PDF Editor | https://aboshidaisuke.github.io/pdf-editor/ |
+| 12 | 飲み会 予算管理 | https://aboshidaisuke.github.io/BBQ/ |
 
 ## 季節デザイン：ハロウィン版（2026）
 
