@@ -1100,45 +1100,49 @@ dd {
   box-shadow: 3px 3px 0 currentColor;
 }
 
-.works-grid-tools .work-card:nth-child(1) .work-open,
-.works-grid-tools .work-card:nth-child(2) .work-open {
+/* Open button colour follows the card, so the order can change freely */
+.work-card-video .work-open {
   color: var(--cobalt-deep);
 }
 
-.works-grid-tools .work-card:nth-child(4) .work-open {
+.work-card-audio .work-open {
+  color: var(--cobalt-deep);
+}
+
+.work-card-budget .work-open {
   color: #188f88;
 }
 
-.works-grid-tools .work-card:nth-child(5) .work-open {
+.work-card-pdf .work-open {
   color: #d71920;
 }
 
-.works-grid-games .work-open {
-  color: #d54a33;
-}
-
-.works-grid-games .work-card:nth-child(2) .work-open {
-  color: #158da7;
-}
-
-.works-grid-games .work-card:nth-child(3) .work-open {
-  color: #a13bb5;
-}
-
-.works-grid-tools .work-card:nth-child(6) .work-open {
+.work-card-zundamon .work-open {
   color: #3f9d3a;
 }
 
-.works-grid-games .work-card:nth-child(4) .work-open {
+.work-card-koe .work-open {
+  color: #e0584c;
+}
+
+.work-card-racing .work-open {
+  color: #d54a33;
+}
+
+.work-card-grochan .work-open {
+  color: #158da7;
+}
+
+.work-card-yozakura .work-open {
+  color: #a13bb5;
+}
+
+.work-card-kinman .work-open {
   color: #a45a1f;
 }
 
-.works-grid-games .work-card:nth-child(5) .work-open {
+.work-card-sushi .work-open {
   color: #b0182a;
-}
-
-.works-grid-tools .work-card:nth-child(7) .work-open {
-  color: #e0584c;
 }
 
 .work-open svg {
