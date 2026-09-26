@@ -874,6 +874,10 @@ dd {
 }
 
 .works-grid-games > .work-card:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.works-grid-tools > .work-card:nth-child(7) {
   grid-column: 3 / span 2;
 }
 
@@ -1035,6 +1039,16 @@ dd {
   background: #fff7ec;
 }
 
+.work-icon-sushi {
+  color: #b0182a;
+  background: #fff4f2;
+}
+
+.work-icon-koe {
+  color: #e0584c;
+  background: #fff4f0;
+}
+
 .work-cat {
   display: block;
   margin-top: 14px;
@@ -1117,6 +1131,14 @@ dd {
 
 .works-grid-games .work-card:nth-child(4) .work-open {
   color: #a45a1f;
+}
+
+.works-grid-games .work-card:nth-child(5) .work-open {
+  color: #b0182a;
+}
+
+.works-grid-tools .work-card:nth-child(7) .work-open {
+  color: #e0584c;
 }
 
 .work-open svg {
@@ -1284,6 +1306,11 @@ dd {
 
   .works-grid-games > .work-card:nth-child(4) {
     grid-column: span 2;
+  }
+
+  .works-grid-games > .work-card:nth-child(5),
+  .works-grid-tools > .work-card:nth-child(7) {
+    grid-column: 2 / span 2;
   }
 }
 

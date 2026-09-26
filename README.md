@@ -24,6 +24,8 @@ HTML / CSS / 最小限の JavaScript のみで構成し、フレームワーク�
 | 08 | GRO-CHAN SKY BLASTER（シューティングゲーム） | https://grochan-sky-blaster.pages.dev/ |
 | 09 | ずんだもん動画制作キット | https://aboshidaisuke.github.io/zundamon-remotion/ |
 | 10 | 金萬 3D（3Dビューア・非公式ファンメイド） | https://aboshidaisuke.github.io/kinman-3d/ |
+| 11 | 鮨図鑑（鮨ネタクイズゲーム） | https://sushi-zukan.pages.dev/ |
+| 12 | こえくらべ（Gemini TTS 聴きくらべ・非公式） | https://koekurabe-app.web.app/ |
 
 ## 季節デザイン：ハロウィン版（2026）
 
